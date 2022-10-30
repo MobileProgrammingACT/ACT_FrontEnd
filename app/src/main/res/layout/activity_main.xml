@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--대제목-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACT"
+            android:textSize="100dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/startDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022-10-27"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <!--주차 스크롤뷰-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <Button
+                    android:id="@+id/btnWeek1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="week1"/>
+
+                <Button
+                    android:id="@+id/btnWeek2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="week2"/>
+
+                <Button
+                    android:id="@+id/btnWeek3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="week3"/>
+                <Button
+                    android:id="@+id/btnWeek4"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="week4"/>
+                <Button
+                    android:id="@+id/btnWeek5"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="week5"/>
+                <Button
+                    android:id="@+id/btnWeek6"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="week6"/>
+                <Button
+                    android:id="@+id/btnWeek7"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="week7"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--하단 메뉴바-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#cccccc"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
