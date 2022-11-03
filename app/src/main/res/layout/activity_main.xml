@@ -334,7 +334,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#cccccc"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_gravity="bottom">
 
         <RelativeLayout
             android:layout_width="300dp"
@@ -365,9 +366,6 @@
 
         </RelativeLayout>
 
-
     </LinearLayout>
-
-
 
 </LinearLayout>
