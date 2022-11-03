@@ -8,13 +8,15 @@
     <!--대제목-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ACT"
-            android:textSize="100dp"/>
+            android:textSize="70dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,79 +33,341 @@
 
     </LinearLayout>
 
-    <!--주차 스크롤뷰-->
+    <!--주차 스크롤뷰 컨테이너-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:padding="20dp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
 
-        <ScrollView
+        <!--주차 선택 버튼 스크롤뷰-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            
-            <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/weekSelectBtnT"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="T"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <Button
+                        android:id="@+id/weekSelectBtn1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="1"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <Button
+                        android:id="@+id/weekSelectBtn2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="2"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <Button
+                        android:id="@+id/weekSelectBtn3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="3"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <Button
+                        android:id="@+id/weekSelectBtn4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="4"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <Button
+                        android:id="@+id/weekSelectBtn5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="5"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <Button
+                        android:id="@+id/weekSelectBtn6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="6"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <Button
+                        android:id="@+id/weekSelectBtn7"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="7"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+
+        <!--주차별 이미지 스크롤뷰-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-                
-                <Button
-                    android:id="@+id/btnWeek1"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="week1"/>
+                android:scrollbars="none">
 
-                <Button
-                    android:id="@+id/btnWeek2"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="week2"/>
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
 
-                <Button
-                    android:id="@+id/btnWeek3"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="week3"/>
-                <Button
-                    android:id="@+id/btnWeek4"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="week4"/>
-                <Button
-                    android:id="@+id/btnWeek5"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="week5"/>
-                <Button
-                    android:id="@+id/btnWeek6"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="week6"/>
-                <Button
-                    android:id="@+id/btnWeek7"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="week7"/>
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent">
 
-            </LinearLayout>
+                        <ImageView
+                            android:id="@+id/weekSelectImgViewT"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimgt"
+                            android:scaleType="fitXY"/>
 
-        </ScrollView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tutorial"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/weekSelectImgView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimg1"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEK1"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/weekSelectImgView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimg2"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEK2"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/weekSelectImgView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimg3"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEK3"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/weekSelectImgView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimgt"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEK4"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/weekSelectImgView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimgt"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEK5"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/weekSelectImgView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimgt"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEK6"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/weekSelectImgView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weekselectimgt"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEK7"
+                            android:textSize="70dp"
+                            android:layout_gravity="bottom|left"
+                            android:textColor="#ffffff"
+                            android:layout_margin="4dp"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
 
     </LinearLayout>
 
     <!--하단 메뉴바-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3">
+        android:layout_height="60dp"
+        android:background="#cccccc"
+        android:gravity="center">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#cccccc"/>
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/menuBookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bookmark" />
+
+            <ImageView
+                android:id="@+id/menuHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/menuFlag"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/flag"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
 
 
     </LinearLayout>
+
+
 
 </LinearLayout>
