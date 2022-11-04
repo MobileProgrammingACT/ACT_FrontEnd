@@ -4,4 +4,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--주차 제목 & activity제목 & activity 소개-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WEEK1"
+            android:textSize="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="<"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="라벨링 (딱지 붙이기)"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="당신은 많은 것에 융합되어 있고 그것이 당신의 삶을 방해하고 있음을 깨달았을 것이지만, 걱정할 필요 없습니다.
+                            첫 주의 목표는 탈융합을 연습하는 것입니다."/>
+
+    </LinearLayout>
+
+    <!--활동 기록란-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="적어보세요"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#888888"
+            android:hint="적는 란"/>
+
+    </LinearLayout>
+
+    <!--하단 메뉴바-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#cccccc"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/menuBookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bookmark" />
+
+            <ImageView
+                android:id="@+id/menuHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/menuFlag"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/flag"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 </LinearLayout>
