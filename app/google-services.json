@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "837318496420",
+    "firebase_url": "https://actproject-78447-default-rtdb.firebaseio.com",
+    "project_id": "actproject-78447",
+    "storage_bucket": "actproject-78447.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837318496420:android:d2d9dc9f222316a71cd631",
+        "android_client_info": {
+          "package_name": "com.example.actprime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837318496420-rcrt8td6c00en5rr0dr28jjordg7lop4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKGc6SEXwr97SiN55NTBv8swOj10sEcbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837318496420-rcrt8td6c00en5rr0dr28jjordg7lop4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837318496420:android:0f1138e5c58a00c11cd631",
+        "android_client_info": {
+          "package_name": "com.example.actproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837318496420-rcrt8td6c00en5rr0dr28jjordg7lop4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKGc6SEXwr97SiN55NTBv8swOj10sEcbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837318496420-rcrt8td6c00en5rr0dr28jjordg7lop4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837318496420:android:afb13d4bb48675351cd631",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837318496420-rcrt8td6c00en5rr0dr28jjordg7lop4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKGc6SEXwr97SiN55NTBv8swOj10sEcbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837318496420-rcrt8td6c00en5rr0dr28jjordg7lop4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
