@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="~~님 환영합니다!\n 이 아이디로 계속하시겠어요?"/>
+
+    <!-- 추가 수정 : 아이디에 알맞게 인사하기 예) nqn4iwin님 환영합니다! -->
+
+</LinearLayout>
