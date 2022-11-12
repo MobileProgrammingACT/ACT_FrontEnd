@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--주차 제목 및 날짜-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WEEK1"
+            android:textSize="50dp"/>
+
+        <!--시작 날짜-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textSize="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022-10-22"
+            android:textSize="20dp"/>
+
+        </LinearLayout>
+
+        <!--종료 날짜-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textSize="20dp"
+                android:layout_marginRight="44dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022-10-29"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+
+        <!--수평선-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+    <!--활동 스크롤뷰-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="*">
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/week1ActivityBtn1"
+                            android:layout_height="130dp"
+                            android:text="activity1"
+                            android:layout_marginRight="10dp"/>
+
+                        <Button
+                            android:id="@+id/week1ActivityBtn2"
+                            android:layout_height="130dp"
+                            android:text="activity2"
+                            android:layout_marginLeft="10dp"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/week1ActivityBtn3"
+                            android:layout_height="130dp"
+                            android:text="activity3"
+                            android:layout_marginRight="10dp"/>
+
+                        <Button
+                            android:id="@+id/week1ActivityBtn4"
+                            android:layout_height="130dp"
+                            android:text="activity4"
+                            android:layout_marginLeft="10dp"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/week1ActivityBtn5"
+                            android:layout_height="130dp"
+                            android:text="activity5"
+                            android:layout_marginRight="10dp"/>
+
+                        <Button
+                            android:id="@+id/week1ActivityBtn6"
+                            android:layout_height="130dp"
+                            android:text="activity6"
+                            android:layout_marginLeft="10dp"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/week1ActivityBtn7"
+                            android:layout_height="130dp"
+                            android:text="activity7"
+                            android:layout_marginRight="10dp"/>
+
+                        <Button
+                            android:id="@+id/week1ActivityBtn8"
+                            android:layout_height="130dp"
+                            android:text="activity8"
+                            android:layout_marginLeft="10dp"/>
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <!--하단 메뉴바-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#cccccc"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/menuBookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bookmark" />
+
+            <ImageView
+                android:id="@+id/menuHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/menuFlag"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/flag"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
