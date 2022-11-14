@@ -1,28 +1,39 @@
 package com.example.actprime;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Looper;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.EditText;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class ThirdActivity extends AppCompatActivity {
 
-    Button explain1,btnNext, btnPrev, btnEnd;
+    Button explain1,btnNext, btnPrev, btnEnd, submit;
     ImageButton musicButton;
     View activity1ExView;
+    EditText content;
     ViewFlipper vFlipper;
     MediaPlayer musicPlayer;
     int count = 0;
+
+    DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+    DatabaseReference conditionRef = mRootRef.child("text");
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,6 +56,9 @@ public class ThirdActivity extends AppCompatActivity {
                 }
             }
         });
+
+        submit = (Button) findViewById(R.id.submit);
+        content = (EditText) findViewById(R.id.content);
 
         /*화면에 진입했을 때 활동에 관한 설명이 바로 뜨게하기 */
         activity1ExView = (View) View.inflate(ThirdActivity.this, R.layout.week_one_activity1_explanation, null);
@@ -166,6 +180,18 @@ public class ThirdActivity extends AppCompatActivity {
                         window.dismiss();
                     }
                 });
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                conditionRef.setValue(content.getText().toString());
             }
         });
     }

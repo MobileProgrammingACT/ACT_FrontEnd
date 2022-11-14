@@ -73,9 +73,6 @@ public class LoginActivity extends AppCompatActivity {
                                     Intent intent = new Intent(LoginActivity.this, AppCompatActivity.class);
                                     startActivity(intent);
                                     finish();
-                                } else {
-                                    Toast.makeText(LoginActivity.this, "이미 가입된 아이디입니다.", Toast.LENGTH_SHORT).show();
-                                    return;
                                 }
                             }
                         });
