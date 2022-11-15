@@ -28,7 +28,7 @@
             android:id="@+id/startDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2022-10-27"
+            android:text="2022-11-16"
             android:textSize="20dp"/>
 
     </LinearLayout>

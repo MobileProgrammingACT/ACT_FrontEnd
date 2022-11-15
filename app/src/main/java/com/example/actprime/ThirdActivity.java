@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -192,6 +193,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 conditionRef.setValue(content.getText().toString());
+                Toast.makeText(getApplicationContext(), "저장됐습니다", Toast.LENGTH_SHORT).show();
             }
         });
     }
