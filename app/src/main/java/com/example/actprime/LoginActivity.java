@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,10 +19,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.w3c.dom.Text;
+
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText email_join, pwd_join;
-    public Button SignupBtn, LoginBtn, SubmitBtn;
+    private EditText join_email, join_pwd;
+    public Button SignupBtn;
     View dialogView;
 
     FirebaseAuth firebaseAuth;
@@ -29,40 +32,20 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_page);
+        setContentView(R.layout.signup_page);
         setTitle("이메일 로그인/회원가입");
 
         SignupBtn = (Button) findViewById(R.id.SignupBtn);
-        LoginBtn = (Button) findViewById(R.id.LoginBtn);
-        email_join = (EditText) findViewById(R.id.email_join);
-        pwd_join = (EditText) findViewById(R.id.pwd_join);
-        SubmitBtn = (Button) findViewById(R.id.SubmitBtn);
+        join_email = (EditText) findViewById(R.id.join_email);
+        join_pwd = (EditText) findViewById(R.id.join_pwd);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
         SignupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                email_join.setVisibility(View.VISIBLE);
-                pwd_join.setVisibility(View.VISIBLE);
-                SubmitBtn.setVisibility(View.VISIBLE);
-            }
-        });
-
-        LoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                email_join.setVisibility(View.VISIBLE);
-                pwd_join.setVisibility(View.VISIBLE);
-                SubmitBtn.setVisibility(View.VISIBLE);
-            }
-        });
-
-        SubmitBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                String newemail = email_join.getText().toString().trim();
-                String newpwd = pwd_join.getText().toString().trim();
+                String newemail = join_email.getText().toString().trim();
+                String newpwd = join_pwd.getText().toString().trim();
 
                 firebaseAuth.createUserWithEmailAndPassword(newemail, newpwd)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
