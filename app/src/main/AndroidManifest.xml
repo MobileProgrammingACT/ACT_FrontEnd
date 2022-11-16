@@ -19,6 +19,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -33,6 +34,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".SignupActivity"/>
         <activity android:name=".SecondActivity"/>
         <activity android:name=".ThirdActivity"/>
 

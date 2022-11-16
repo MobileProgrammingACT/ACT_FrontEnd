@@ -96,13 +96,14 @@
                     android:stretchColumns="*">
 
                     <TableRow>
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn1"
                             android:layout_height="130dp"
+                            android:backgroundTint="#FF9999"
                             android:text="activity1"
                             android:layout_marginRight="10dp"/>
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn2"
                             android:layout_height="130dp"
                             android:text="activity2"
@@ -110,13 +111,13 @@
                     </TableRow>
 
                     <TableRow>
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn3"
                             android:layout_height="130dp"
                             android:text="activity3"
                             android:layout_marginRight="10dp"/>
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn4"
                             android:layout_height="130dp"
                             android:text="activity4"
@@ -124,13 +125,13 @@
                     </TableRow>
 
                     <TableRow>
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn5"
                             android:layout_height="130dp"
                             android:text="activity5"
                             android:layout_marginRight="10dp"/>
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn6"
                             android:layout_height="130dp"
                             android:text="activity6"
@@ -138,13 +139,13 @@
                     </TableRow>
 
                     <TableRow>
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn7"
                             android:layout_height="130dp"
                             android:text="activity7"
                             android:layout_marginRight="10dp"/>
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/week1ActivityBtn8"
                             android:layout_height="130dp"
                             android:text="activity8"
