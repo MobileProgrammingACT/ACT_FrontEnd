@@ -193,7 +193,8 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 conditionRef.setValue(content.getText().toString());
-                Toast.makeText(getApplicationContext(), "저장됐습니다", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "저장됐습니다", Toast.LENGTH_SHORT).show();
+
             }
         });
     }

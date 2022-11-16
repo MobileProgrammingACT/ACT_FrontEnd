@@ -68,8 +68,8 @@ public class SignupActivity extends AppCompatActivity {
                 dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent goLogin = new Intent(getApplicationContext(), LoginActivity.class); //이거 로그인 페이지 뜨게 하기
-                        startActivity(goLogin);
+                        Intent main = new Intent(getApplicationContext(), MainActivity.class); //이거 로그인 페이지 뜨게 하기
+                        startActivity(main);
                     }
                 });
                 dlg.setNegativeButton("취소", new DialogInterface.OnClickListener() {
