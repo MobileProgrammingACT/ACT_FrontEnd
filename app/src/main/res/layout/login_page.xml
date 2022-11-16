@@ -58,7 +58,8 @@
             android:paddingRight="15dp"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-            android:hint="PW"/>
+            android:hint="PW"
+            android:inputType="textPassword"/>
 
 
         <androidx.appcompat.widget.AppCompatButton

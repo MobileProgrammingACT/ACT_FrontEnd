@@ -44,7 +44,6 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week_one_activity1);
 
-        /**/
         submit = findViewById(R.id.submit);
         content = findViewById(R.id.content);
 
