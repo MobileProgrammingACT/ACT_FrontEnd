@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SecondActivity extends AppCompatActivity {
 
     Button week1ActivityBtn1, week1ActivityBtn2;
-    Button wee1Activity1submit;
     View alertDialog;
 
     @Override
@@ -24,7 +23,6 @@ public class SecondActivity extends AppCompatActivity {
 
         week1ActivityBtn1 = (Button) findViewById(R.id.week1ActivityBtn1);
         week1ActivityBtn2 = (Button) findViewById(R.id.week1ActivityBtn2);
-        wee1Activity1submit = (Button) findViewById(R.id.submit);
 
         week1ActivityBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
