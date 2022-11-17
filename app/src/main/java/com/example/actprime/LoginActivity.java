@@ -19,10 +19,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private FirebaseAuth firebaseAuth = null;
     private EditText login_email, login_pwd;
     public Button LoginBtn;
     public TextView SignupText;
-    FirebaseAuth firebaseAuth;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

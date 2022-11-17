@@ -21,11 +21,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignupActivity extends AppCompatActivity {
 
+    private FirebaseAuth firebaseAuth = null;
     private EditText join_email, join_pwd;
     public Button SignupBtn;
     View dialogView;
-
-    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,17 +48,15 @@ public class SignupActivity extends AppCompatActivity {
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-
                                 if (task.isSuccessful()) {
                                     Intent intent = new Intent(SignupActivity.this, AppCompatActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
-
-                               else {
+                               /*else {
                                     Toast.makeText(SignupActivity.this, "회원 가입 실패", Toast.LENGTH_SHORT).show();
                                     return;
-                               }
+                               }*/
                             }
                         });
 
