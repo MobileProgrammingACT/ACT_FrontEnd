@@ -40,45 +40,47 @@ public class SignupActivity extends AppCompatActivity {
 
         SignupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String newemail = join_email.getText().toString().trim();
-                String newpwd = join_pwd.getText().toString().trim();
-
-                firebaseAuth.createUserWithEmailAndPassword(newemail, newpwd)
-                        .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    Intent intent = new Intent(SignupActivity.this, AppCompatActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                               /*else {
-                                    Toast.makeText(SignupActivity.this, "회원 가입 실패", Toast.LENGTH_SHORT).show();
-                                    return;
-                               }*/
-                            }
-                        });
-
-                dialogView = (View) View.inflate(SignupActivity.this, R.layout.dialog, null);
-                AlertDialog.Builder dlg = new AlertDialog.Builder(SignupActivity.this);
-                dlg.setView(dialogView);
-                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent main = new Intent(getApplicationContext(), MainActivity.class); //이거 로그인 페이지 뜨게 하기
-                        startActivity(main);
-                    }
-                });
-                dlg.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(SignupActivity.this, "취소했습니다", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                dlg.show();
-
+            public void onClick(View view) {
+                if (!join_email.getText().toString().equals("") && !join_pwd.getText().toString().equals("")) {
+                    createUser(join_email.getText().toString(), join_pwd.getText().toString());
+                } else {
+                    Toast.makeText(SignupActivity.this, "계정과 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
-}
+        private void createUser(String email, String pwd) {
+            firebaseAuth.createUserWithEmailAndPassword(email, pwd)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // 회원가입 성공시
+                                Toast.makeText(SignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
+                                finish();
+                            } else {
+                                // 계정이 중복된 경우
+                                Toast.makeText(SignupActivity.this, "이미 존재하는 계정입니다.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+            dialogView = (View) View.inflate(SignupActivity.this, R.layout.dialog, null);
+            AlertDialog.Builder dlg = new AlertDialog.Builder(SignupActivity.this);
+            dlg.setView(dialogView);
+            dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent main = new Intent(getApplicationContext(), MainActivity.class); //이거 로그인 페이지 뜨게 하기
+                    startActivity(main);
+                }
+            });
+            dlg.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Toast.makeText(SignupActivity.this, "취소했습니다", Toast.LENGTH_SHORT).show();
+                }
+            });
+            dlg.show();
+            }
+        }
