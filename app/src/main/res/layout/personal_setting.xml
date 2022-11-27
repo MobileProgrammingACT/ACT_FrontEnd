@@ -4,4 +4,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--설정 화면-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="4"
+        android:gravity="left|center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_settingView"
+            android:layout_width="28dp"
+            android:layout_height="54dp"
+            android:src="@drawable/back"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:gravity="center"
+            android:text="나의 정보"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
+    <!--연동된 계정, 시작 날짜 설정, 알람 시간 설정-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--연동된 계정-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="left|center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="연동된 계정"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/usingAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nqn4iwin@gmail.com"
+                android:textSize="30dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <!--시작 날짜 설정-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시작 날짜"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/startDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022-11-28"
+                android:textSize="30dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!--알람 시간 설정-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="알람 시간"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:id="@+id/alarmRefreshBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/refresh"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/alarmTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오전 9시"
+                android:textSize="30dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <!--네비게이션 바-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:layout_gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/menuBookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bookmark" />
+
+            <ImageView
+                android:id="@+id/menuHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/menuSetting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/settings"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
 </LinearLayout>

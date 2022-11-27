@@ -367,10 +367,10 @@
                 android:layout_centerInParent="true"/>
 
             <ImageView
-                android:id="@+id/menuFlag"
+                android:id="@+id/menuSetting"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/flag"
+                android:src="@drawable/settings"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"/>
 
