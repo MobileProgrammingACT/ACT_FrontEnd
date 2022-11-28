@@ -46,6 +46,7 @@
         <activity android:name=".SignupActivity"/>
         <activity android:name=".SecondActivity"/>
         <activity android:name=".ThirdActivity"/>
+        <activity android:name=".PersonalSettingActivity"/>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

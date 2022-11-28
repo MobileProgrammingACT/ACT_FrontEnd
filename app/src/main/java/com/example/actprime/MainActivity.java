@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView weekSelectImgView1, weekSelectImgView2;
     View alertDialog;
+    ImageView menuBookmark, menuHome ,menuSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        // 하단 네비게이션 바 동작
+        // 3. personal_setting 화면 넘어가기
+        menuSetting = (ImageView) findViewById(R.id.menuSetting);
+
+        menuSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalSettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

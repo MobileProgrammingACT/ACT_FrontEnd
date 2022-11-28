@@ -13,8 +13,8 @@
         android:layout_weight="4"
         android:gravity="left|center">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/back_settingView"
+        <ImageView
+            android:id="@+id/goBackIcon"
             android:layout_width="28dp"
             android:layout_height="54dp"
             android:src="@drawable/back"

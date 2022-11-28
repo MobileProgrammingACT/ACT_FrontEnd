@@ -1,12 +1,14 @@
 package com.example.actprime;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -32,6 +34,7 @@ public class ThirdActivity extends AppCompatActivity {
 
     Button explain1,btnNext, btnPrev, btnEnd, submit;
     ImageButton musicButton;
+    ImageView menuBookmark, menuHome ,menuSetting;
     View activity1ExView;
     EditText content;
     ViewFlipper vFlipper;
@@ -202,6 +205,29 @@ public class ThirdActivity extends AppCompatActivity {
                         window.dismiss();
                     }
                 });
+            }
+        });
+
+        // 하단 네비게이션 바 활성화
+        // 2. mainActivity 화면 넘어가기
+        menuHome = (ImageView) findViewById(R.id.menuHome);
+
+        menuHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 3. personal_setting 화면 넘어가기
+        menuSetting = (ImageView) findViewById(R.id.menuSetting);
+
+        menuSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalSettingActivity.class);
+                startActivity(intent);
             }
         });
     }
