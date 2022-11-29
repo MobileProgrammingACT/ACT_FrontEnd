@@ -8,18 +8,18 @@
     <!--주차 제목 및 날짜-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2.5"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="WEEK1"
-            android:textSize="50dp"/>
+            android:textSize="45dp"/>
 
         <!--시작 날짜-->
         <LinearLayout
@@ -69,104 +69,121 @@
             android:layout_height="1dp"
             android:background="#000000"
             android:layout_marginTop="20dp"/>
-
     </LinearLayout>
-
 
     <!--활동 스크롤뷰-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TableLayout
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:stretchColumns="*">
+                    android:layout_height="70dp"
+                    android:backgroundTint="#FF9999"
+                    android:text="activity1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
 
-                    <TableRow>
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn1"
-                            android:layout_height="130dp"
-                            android:backgroundTint="#FF9999"
-                            android:text="activity1"
-                            android:layout_marginRight="10dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="activity2"
+                    android:enabled="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn2"
-                            android:layout_height="130dp"
-                            android:text="activity2"
-                            android:layout_marginLeft="10dp"/>
-                    </TableRow>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="activity3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="10dp"/>
 
-                    <TableRow>
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn3"
-                            android:layout_height="130dp"
-                            android:text="activity3"
-                            android:layout_marginRight="10dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="activity4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="10dp"/>
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn4"
-                            android:layout_height="130dp"
-                            android:text="activity4"
-                            android:layout_marginLeft="10dp"/>
-                    </TableRow>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn5"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="activity5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="10dp"/>
 
-                    <TableRow>
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn5"
-                            android:layout_height="130dp"
-                            android:text="activity5"
-                            android:layout_marginRight="10dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn6"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="activity6"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="10dp"/>
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn6"
-                            android:layout_height="130dp"
-                            android:text="activity6"
-                            android:layout_marginLeft="10dp"/>
-                    </TableRow>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn7"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="activity7"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="10dp"/>
 
-                    <TableRow>
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn7"
-                            android:layout_height="130dp"
-                            android:text="activity7"
-                            android:layout_marginRight="10dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/week1ActivityBtn8"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="activity8"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="10dp"/>
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/week1ActivityBtn8"
-                            android:layout_height="130dp"
-                            android:text="activity8"
-                            android:layout_marginLeft="10dp"/>
-                    </TableRow>
-
-                </TableLayout>
             </LinearLayout>
 
         </ScrollView>
-
-
     </LinearLayout>
 
 
+    <!--하단 메뉴바-->
     <!--하단 메뉴바-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#cccccc"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_gravity="bottom">
 
         <RelativeLayout
             android:layout_width="300dp"

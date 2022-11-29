@@ -1,14 +1,12 @@
 package com.example.actprime;
 
 import android.app.AlertDialog;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -34,7 +32,6 @@ public class ThirdActivity extends AppCompatActivity {
 
     Button explain1,btnNext, btnPrev, btnEnd, submit;
     ImageButton musicButton;
-    ImageView menuBookmark, menuHome ,menuSetting;
     View activity1ExView;
     EditText content;
     ViewFlipper vFlipper;
@@ -207,29 +204,6 @@ public class ThirdActivity extends AppCompatActivity {
                 });
             }
         });
-
-        // 하단 네비게이션 바 활성화
-        // 2. mainActivity 화면 넘어가기
-        menuHome = (ImageView) findViewById(R.id.menuHome);
-
-        menuHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 3. personal_setting 화면 넘어가기
-        menuSetting = (ImageView) findViewById(R.id.menuSetting);
-
-        menuSetting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PersonalSettingActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     /*Edittext 값 외부로 나간 이후에도 저장가능한 메소드*/
@@ -246,7 +220,7 @@ public class ThirdActivity extends AppCompatActivity {
     /*작성하는 메소드 writereview 정의, DB에 저장되는 방식 "review"키 값 내에 저장하기*/
     public void writereview(String content) {
         WriteReview writereview = new WriteReview(content);
-        ref.child("review").setValue(content);
+        ref.child("Day1Act1").setValue(content);
     }
 
     /*활동에서 나가면 음악이 꺼지게*/
