@@ -117,17 +117,17 @@
                     <EditText
                         android:hint="예) 지루함 외로움\n 같은 힘든 감정"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="게임, TV 보기"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="학습이나 취업에\n 방해"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                 </TableRow>
 
@@ -137,17 +137,17 @@
                     <EditText
                         android:hint="예) 지루함 외로움\n 같은 힘든 감정"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="게임, TV 보기"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="학습이나 취업에\n 방해"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
 
                 </TableRow>
@@ -158,17 +158,17 @@
                     <EditText
                         android:hint="예) 지루함 외로움\n 같은 힘든 감정"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="게임, TV 보기"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="학습이나 취업에\n 방해"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                 </TableRow>
 
@@ -178,17 +178,17 @@
                     <EditText
                         android:hint="예) 지루함 외로움\n 같은 힘든 감정"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="게임, TV 보기"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
                     <EditText
                         android:hint="학습이나 취업에\n 방해"
                         android:textSize="14dp"
-                        android:background="null"
+                        android:background="@null"
                         android:maxLines="3"/>
 
                 </TableRow>
