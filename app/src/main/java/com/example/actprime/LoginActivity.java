@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_page);
+        setContentView(R.layout.login);
         setTitle("로그인 페이지");
 
         LoginBtn = (Button) findViewById(R.id.LoginBtn);

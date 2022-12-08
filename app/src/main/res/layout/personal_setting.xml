@@ -61,6 +61,11 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"/>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_marginTop="20dp"/>
 
         </LinearLayout>
 
@@ -85,6 +90,12 @@
                 android:textSize="30dp"
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_marginTop="20dp"/>
 
         </LinearLayout>
 
@@ -125,11 +136,13 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"/>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_marginTop="20dp"/>
+
         </LinearLayout>
-
-
-
-
 
     </LinearLayout>
 

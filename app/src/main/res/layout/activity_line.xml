@@ -70,6 +70,11 @@
                 android:layout_weight="1"
                 android:text="이번에는 어떤 것이 당신을 방해하는지 적어봅시다.\n당신의 어떤 감정, 신체 감각, 기억, 충동이 의미 있는 삶을\n방해하나요? 그것을 받아들인다면 어떤 삶을 살게 될까요?" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"

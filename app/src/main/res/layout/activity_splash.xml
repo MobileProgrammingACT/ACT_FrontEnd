@@ -5,14 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash"
-    android:gravity="center"
     tools:context=".SplashActivity">
+
+    <!--
+    여기에 캐릭터 넣으면 좋아보입니다.
+    -->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACT"
-        android:textColor="#7d7a7d"
-        android:textSize="100sp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="250dp"
+        android:text="나의 가치를 위해"
+        android:textColor="#ffffff"
+        android:textSize="35sp"/>
 
 </RelativeLayout>

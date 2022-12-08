@@ -9,21 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.EditText;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class ThirdActivity extends AppCompatActivity {
 
@@ -44,7 +38,7 @@ public class ThirdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.week_one_activity1);
+        setContentView(R.layout.week1_activity1);
 
         submit = findViewById(R.id.submit);
         content = findViewById(R.id.content);
@@ -85,7 +79,7 @@ public class ThirdActivity extends AppCompatActivity {
         content = (EditText) findViewById(R.id.content);
 
         /*화면에 진입했을 때 활동에 관한 설명이 바로 뜨게하기 */
-        activity1ExView = (View) View.inflate(ThirdActivity.this, R.layout.week_one_activity1_explanation, null);
+        activity1ExView = (View) View.inflate(ThirdActivity.this, R.layout.week1_activity1_explanation, null);
         AlertDialog.Builder a1EX = new AlertDialog.Builder(ThirdActivity.this);
         AlertDialog exit = a1EX.create();
         AlertDialog window = a1EX.create();
@@ -148,7 +142,7 @@ public class ThirdActivity extends AppCompatActivity {
         explain1.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            activity1ExView = (View) View.inflate(ThirdActivity.this, R.layout.week_one_activity1_explanation, null);
+                                            activity1ExView = (View) View.inflate(ThirdActivity.this, R.layout.week1_activity1_explanation, null);
                                             AlertDialog.Builder a1EX = new AlertDialog.Builder(ThirdActivity.this);
                                             AlertDialog window = a1EX.create();
                                             window.setView(activity1ExView);

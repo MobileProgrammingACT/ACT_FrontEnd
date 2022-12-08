@@ -23,7 +23,7 @@
 
         <!--시작 날짜-->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -31,14 +31,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="From"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_marginRight="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2022-11-16"
-                android:textSize="20dp"/>
+                android:layout_weight="1"
+                android:textSize="20sp"/>
 
         </LinearLayout>
 
@@ -95,7 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:backgroundTint="#FF9999"
-                    android:text="activity1"
+                    android:text="설명란(수정예정)"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"/>
@@ -104,7 +105,7 @@
                     android:id="@+id/week1ActivityBtn2"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:text="activity2"
+                    android:text="activity1"
                     android:enabled="false"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -114,7 +115,7 @@
                     android:id="@+id/week1ActivityBtn3"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:text="activity3"
+                    android:text="activity2"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:enabled="false"
@@ -124,7 +125,7 @@
                     android:id="@+id/week1ActivityBtn4"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:text="activity4"
+                    android:text="activity3"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:enabled="false"
@@ -134,7 +135,7 @@
                     android:id="@+id/week1ActivityBtn5"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:text="activity5"
+                    android:text="activity4"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:enabled="false"
@@ -144,7 +145,7 @@
                     android:id="@+id/week1ActivityBtn6"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:text="activity6"
+                    android:text="activity5"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:enabled="false"
@@ -154,7 +155,7 @@
                     android:id="@+id/week1ActivityBtn7"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:text="activity7"
+                    android:text="activity6"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:enabled="false"
@@ -164,7 +165,7 @@
                     android:id="@+id/week1ActivityBtn8"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:text="activity8"
+                    android:text="activity7"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:enabled="false"

@@ -19,15 +19,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="도움이 될까요?"
+            android:text="1주차 목표: 수용하기"
             android:textSize="28sp"/>
-
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/musicButton"
-            android:padding="0dp"
-            android:src="@drawable/music_states"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -50,7 +43,7 @@
             android:paddingRight="20dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:src="@drawable/tutorial_2"
+            android:src="@drawable/tutorial_1"
             android:scaleType="fitXY"/>
 
     </LinearLayout>
