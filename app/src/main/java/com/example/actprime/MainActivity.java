@@ -11,9 +11,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
-    ImageView weekSelectImgView1, weekSelectImgView2;
+    ImageView weekSelectImgViewT, weekSelectImgView1, weekSelectImgView2, weekSelectImgView3, weekSelectImgView4;
     View alertDialog;
     ImageView menuBookmark, menuHome ,menuSetting;
 
@@ -22,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        weekSelectImgViewT = (ImageView) findViewById(R.id.weekSelectImgViewT);
         weekSelectImgView1 = (ImageView) findViewById(R.id.weekSelectImgView1);
         weekSelectImgView2 = (ImageView) findViewById(R.id.weekSelectImgView2);
+        weekSelectImgView3 = (ImageView) findViewById(R.id.weekSelectImgView3);
+        weekSelectImgView4 = (ImageView) findViewById(R.id.weekSelectImgView4);
 
         weekSelectImgView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,9 +61,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 dlg.show();
-
             }
+        });
 
+        // 현재 글쓰기 내용은 DB에 저장안됨, 대신 아래 메소드를 통해 Realtime DB에 연결되었음은 확인가능
+        weekSelectImgView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("message");
+
+                myRef.setValue("Hello, World!");
+            }
         });
 
         // 하단 네비게이션 바 동작

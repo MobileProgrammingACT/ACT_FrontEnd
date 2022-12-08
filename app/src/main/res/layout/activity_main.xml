@@ -161,13 +161,13 @@
                         android:layout_width="360dp"
                         android:layout_height="match_parent">
 
+
                         <ImageView
                             android:id="@+id/weekSelectImgViewT"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/weekselectimgt"
-                            android:scaleType="fitXY"/>
-
+                            android:scaleType="fitXY"
+                            android:src="@drawable/weekselectimgt" />
 
                         <TextView
                             android:layout_width="wrap_content"
