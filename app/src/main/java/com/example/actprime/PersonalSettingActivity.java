@@ -1,25 +1,47 @@
 package com.example.actprime;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+
+import com.example.actprime.alarm.AlertReceiver;
+import com.example.actprime.alarm.NotificationHelper;
 
 public class PersonalSettingActivity extends AppCompatActivity {
 
     ImageView goBackIcon, alarmRefreshBtn;
     TextView usingAccount, startDay, alarmTime;
     ImageView menuBookmark, menuHome ,menuSetting;
+    private NotificationHelper mNotificationHelper;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personal_setting);
+
+
+        // 9시 옆 리셋 버튼 누르면 알람 동작 시작
+        ImageView resetBtn = findViewById(R.id.alarmRefreshBtn);
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateTimeText();
+                startAlarm();
+            }
+        });
 
         // 1. 상단 뒤로가기 버튼 누르면 액티비티 종료
         goBackIcon = (ImageView) findViewById(R.id.goBackIcon);
@@ -40,7 +62,27 @@ public class PersonalSettingActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
 
+    private void updateTimeText() {
+        String timeText = "60초 뒤 알람이 울려요 :>";
+        Toast.makeText(getApplicationContext(), timeText, Toast.LENGTH_SHORT).show();
+    }
+
+    private void startAlarm() {
+        AlarmManager alarmManager = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(getApplicationContext(), AlertReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),1,intent,PendingIntent.FLAG_IMMUTABLE);
+        //60초 뒤 실행
+        alarmManager.set(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime()+60*1000,pendingIntent);
+    }
+
+    private void cancelAlarm() {
+        AlarmManager alarmManager = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(getApplicationContext(), AlertReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),1,intent,0);
+        alarmManager.cancel(pendingIntent);
+        Toast.makeText(getApplicationContext(), "알람 취소 !", Toast.LENGTH_SHORT).show();
     }
 }

@@ -47,7 +47,7 @@ public class ThirdActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // writereview(content.getText().toString());
+                writereview(content.getText().toString());
                 Toast.makeText(ThirdActivity.this, "저장했습니다", Toast.LENGTH_SHORT).show();
             }
         });

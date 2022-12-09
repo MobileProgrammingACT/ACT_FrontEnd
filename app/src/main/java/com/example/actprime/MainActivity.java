@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -29,6 +30,17 @@ public class MainActivity extends AppCompatActivity {
         weekSelectImgView2 = (ImageView) findViewById(R.id.weekSelectImgView2);
         weekSelectImgView3 = (ImageView) findViewById(R.id.weekSelectImgView3);
         weekSelectImgView4 = (ImageView) findViewById(R.id.weekSelectImgView4);
+
+        ImageView setting_btn = (ImageView) findViewById(R.id.menuSetting);
+
+        setting_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(getApplicationContext(), PersonalSettingActivity.class);
+               startActivity(intent);
+            }
+        });
+
 
         weekSelectImgView1.setOnClickListener(new View.OnClickListener() {
             @Override

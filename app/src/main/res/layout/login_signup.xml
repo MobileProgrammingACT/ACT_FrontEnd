@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="회원가입"
-            android:backgroundTint="#d9d9d9"
+            android:backgroundTint="#F7E600"
             android:textSize="20sp"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"

@@ -99,9 +99,9 @@ public class SignupActivity extends AppCompatActivity {
                  Date startdate = new Date(DateSelect.getDate());
                  firebaseRef.child("nqn4iwin").child("startdate").setValue(startdate);**/
 
-                DateSelect = (CalendarView) findViewById(R.id.DateSelect);
-                Date startdate = new Date(DateSelect.getDate());
-                Toast.makeText(SignupActivity.this, startdate.toString(), Toast.LENGTH_SHORT).show();
+                //DateSelect = (CalendarView) findViewById(R.id.DateSelect);
+                //Date startdate = new Date(DateSelect.getDate());
+                //Toast.makeText(SignupActivity.this, startdate.toString(), Toast.LENGTH_SHORT).show();
                 startActivity(main);
             }
         });

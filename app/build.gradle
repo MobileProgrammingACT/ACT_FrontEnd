@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.actprime"
-        minSdk 31
+        minSdk 30
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -30,6 +30,10 @@ android {
 }
 
 dependencies {
+
+    // 자바를 쓰는 경우
+    implementation 'androidx.work:work-runtime:2.7.1'
+
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.7.0'
