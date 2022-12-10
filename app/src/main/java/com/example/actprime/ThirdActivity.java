@@ -18,6 +18,7 @@ import android.widget.EditText;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import android.os.Handler;
 
 public class ThirdActivity extends AppCompatActivity {
 
@@ -49,6 +50,15 @@ public class ThirdActivity extends AppCompatActivity {
             public void onClick(View view) {
                 writereview(content.getText().toString());
                 Toast.makeText(ThirdActivity.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //btn2
+                        ((SecondActivity)SecondActivity.mContext).week1ActivityBtn2.setEnabled(true);
+                    }
+                }, 60000);
             }
         });
 

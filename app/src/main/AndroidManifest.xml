@@ -42,6 +42,22 @@
         <activity android:name=".SecondActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".PersonalSettingActivity" />
+        <activity android:name=".Week2"/>
+        <activity android:name=".Week2Activity1"/>
+        <activity android:name=".Week2Activity2"/>
+        <activity android:name=".Week2Activity3"/>
+        <activity android:name=".Week2Activity4"/>
+        <activity android:name=".Week2Activity5"/>
+        <activity android:name=".Week2Activity6"/>
+        <activity android:name=".Week2Activity7"/>
+        <activity android:name=".Week3"/>
+        <activity android:name=".Week3Activity1"/>
+        <activity android:name=".Week3Activity2"/>
+        <activity android:name=".Week3Activity3"/>
+        <activity android:name=".Week3Activity4"/>
+        <activity android:name=".Week3Activity5"/>
+        <activity android:name=".Week3Activity6"/>
+        <activity android:name=".Week3Activity7"/>
         <receiver android:name=".alarm.AlertReceiver"/>
     </application>
 

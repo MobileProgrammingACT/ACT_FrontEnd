@@ -50,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        weekSelectImgView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Week3.class);
+                startActivity(intent);
+            }
+        });
+
         // 활동1의 저장 버튼을 누를 시 activity2의 색 변경, 그냥 누르면 경고창 뜨고 넘어가려면 확인 눌러야 함 (이지만 일단 대화창 뜨고 다음 화면 넘어가는 것 까지만)
         weekSelectImgView2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 dlg.setPositiveButton("계속", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(getApplicationContext(), SecondActivity.class); // 원래는 활동2의 활동화면으로 가지만 일단 활동1 화면 ㄱㄱ
+                        Intent intent = new Intent(getApplicationContext(), Week2.class); // 원래는 활동2의 활동화면으로 가지만 일단 활동1 화면 ㄱㄱ
                         startActivity(intent);
                     }
                 });

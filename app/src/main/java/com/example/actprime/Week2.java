@@ -1,6 +1,5 @@
 package com.example.actprime;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,81 +9,78 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SecondActivity extends AppCompatActivity {
-    public static Context mContext; // 다른 액티비티에서 변수 사용을 위함
-    Button week1ActivityBtn1, week1ActivityBtn2, week1ActivityBtn3, week1ActivityBtn4, week1ActivityBtn5, week1ActivityBtn6, week1ActivityBtn7, week1ActivityBtn8;
+public class Week2 extends AppCompatActivity {
+
+    Button week2ActivityBtn1, week2ActivityBtn2, week2ActivityBtn3, week2ActivityBtn4, week2ActivityBtn5, week2ActivityBtn6, week2ActivityBtn7;
     View alertDialog;
     ImageView menuBookmark, menuHome ,menuSetting;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.week1);
+        setContentView(R.layout.week2);
 
-        mContext = this;
+        week2ActivityBtn1 = (Button) findViewById(R.id.week2ActivityBtn2);
+        week2ActivityBtn2 = (Button) findViewById(R.id.week2ActivityBtn3);
+        week2ActivityBtn3 = (Button) findViewById(R.id.week2ActivityBtn4);
+        week2ActivityBtn4 = (Button) findViewById(R.id.week2ActivityBtn5);
+        week2ActivityBtn5 = (Button) findViewById(R.id.week2ActivityBtn6);
+        week2ActivityBtn6 = (Button) findViewById(R.id.week2ActivityBtn7);
+        week2ActivityBtn7 = (Button) findViewById(R.id.week2ActivityBtn8);
 
-        week1ActivityBtn1 = (Button) findViewById(R.id.week1ActivityBtn2);
-        week1ActivityBtn2 = (Button) findViewById(R.id.week1ActivityBtn3);
-        week1ActivityBtn3 = (Button) findViewById(R.id.week1ActivityBtn4);
-        week1ActivityBtn4 = (Button) findViewById(R.id.week1ActivityBtn5);
-        week1ActivityBtn5 = (Button) findViewById(R.id.week1ActivityBtn6);
-        week1ActivityBtn6 = (Button) findViewById(R.id.week1ActivityBtn7);
-        week1ActivityBtn7 = (Button) findViewById(R.id.week1ActivityBtn8);
-
-
-
-        week1ActivityBtn1.setOnClickListener(new View.OnClickListener() {
+        week2ActivityBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ThirdActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Week2Activity1.class);
                 startActivity(intent);
             }
         });
 
-        week1ActivityBtn2.setOnClickListener(new View.OnClickListener() {
+        week2ActivityBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week1Activity2.class);
+                Intent intent = new Intent(getApplicationContext(), Week2Activity2.class);
                 startActivity(intent);
             }
         });
 
-        week1ActivityBtn3.setOnClickListener(new View.OnClickListener() {
+        week2ActivityBtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week1Activity3.class);
+                Intent intent = new Intent(getApplicationContext(), Week2Activity3.class);
                 startActivity(intent);
             }
         });
 
-        week1ActivityBtn4.setOnClickListener(new View.OnClickListener() {
+        week2ActivityBtn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week1Activity4.class);
+                Intent intent = new Intent(getApplicationContext(), Week2Activity4.class);
                 startActivity(intent);
             }
         });
 
-        week1ActivityBtn5.setOnClickListener(new View.OnClickListener() {
+        week2ActivityBtn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week1Activity5.class);
+                Intent intent = new Intent(getApplicationContext(), Week2Activity5.class);
                 startActivity(intent);
             }
         });
 
-        week1ActivityBtn6.setOnClickListener(new View.OnClickListener() {
+        week2ActivityBtn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week1Activity6.class);
+                Intent intent = new Intent(getApplicationContext(), Week2Activity6.class);
                 startActivity(intent);
             }
         });
 
-        week1ActivityBtn7.setOnClickListener(new View.OnClickListener() {
+        week2ActivityBtn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week1Activity7.class);
+                Intent intent = new Intent(getApplicationContext(), Week2Activity7.class);
                 startActivity(intent);
             }
         });
@@ -112,6 +108,7 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 }
