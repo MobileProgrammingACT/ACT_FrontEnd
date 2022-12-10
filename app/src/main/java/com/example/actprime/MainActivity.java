@@ -7,10 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.actprime.Week1;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView weekSelectImgViewT, weekSelectImgView1, weekSelectImgView2, weekSelectImgView3, weekSelectImgView4;
     View alertDialog;
-    ImageView menuBookmark, menuHome ,menuSetting;
+    ImageView menuMed, menuHome ,menuSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +41,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        weekSelectImgViewT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Tutorial.class);
+                startActivity(intent);
+            }
+        });
 
         weekSelectImgView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Week1.class);
                 startActivity(intent);
             }
         });
@@ -94,7 +101,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 하단 네비게이션 바 동작
+        // 하단 네비게이션 바 활성화
+        // 1. meditation 화면 넘어가기
+        menuMed = (ImageView) findViewById(R.id.menuMed);
+
+        menuMed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MeditationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 2. mainActivity 화면 넘어가기
+        menuHome = (ImageView) findViewById(R.id.menuHome);
+
+        menuHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // 3. personal_setting 화면 넘어가기
         menuSetting = (ImageView) findViewById(R.id.menuSetting);
 

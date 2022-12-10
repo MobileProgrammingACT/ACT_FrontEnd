@@ -19,15 +19,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tutorial"
+            android:text="명상하기"
             android:textSize="45dp"/>
-
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/musicButton"
-            android:padding="0dp"
-            android:src="@drawable/music_states"/>
 
     </LinearLayout>
     <!--수평선과 이미지, 설명-->
@@ -43,15 +36,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="10dp"
-            android:text="환영합니다!"
-            android:textSize="20dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:text="" />
+            android:text="명상은 마음을 정리하고 차분히 하는 활동입니다. \n설명을 통해 명상을 연습하고 시도해봅시다"
+            android:textSize="18dp"/>
 
         <View
             android:layout_width="match_parent"
@@ -70,49 +56,40 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/medexplain"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="70dp"
+                android:text="명상 설명"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/tutorial1"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:backgroundTint="#FF9999"
-                    android:text="ACT란 무엇인가요?"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/meditation1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="명상파일 1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/tutorial2"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:backgroundTint="#FFF176"
-                    android:text="나에게 도움이 될까요?"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/meditation2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="명상파일 2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/tutorial3"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:backgroundTint="#50F097"
-                    android:text="나를 점검해 봅시다"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"/>
+        </LinearLayout>
 
-            </LinearLayout>
-
-        </ScrollView>
     </LinearLayout>
 
     <!--하단 메뉴바-->
@@ -139,8 +116,8 @@
                 android:id="@+id/menuHome"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/home" />
+                android:src="@drawable/home"
+                android:layout_centerInParent="true"/>
 
             <ImageView
                 android:id="@+id/menuSetting"

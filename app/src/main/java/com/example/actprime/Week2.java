@@ -13,7 +13,7 @@ public class Week2 extends AppCompatActivity {
 
     Button week2ActivityBtn1, week2ActivityBtn2, week2ActivityBtn3, week2ActivityBtn4, week2ActivityBtn5, week2ActivityBtn6, week2ActivityBtn7;
     View alertDialog;
-    ImageView menuBookmark, menuHome ,menuSetting;
+    ImageView menuMed, menuHome ,menuSetting;
 
 
     @Override
@@ -32,7 +32,7 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week2Activity1.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week2Activity1.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +40,7 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week2Activity2.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week2Activity2.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week2Activity3.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week2Activity3.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week2Activity4.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week2Activity4.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +64,7 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week2Activity5.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week2Activity5.class);
                 startActivity(intent);
             }
         });
@@ -72,7 +72,7 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week2Activity6.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week2Activity6.class);
                 startActivity(intent);
             }
         });
@@ -80,12 +80,23 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week2Activity7.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week2Activity7.class);
                 startActivity(intent);
             }
         });
 
         // 하단 네비게이션 바 활성화
+        // 1. meditation 화면 넘어가기
+        menuMed = (ImageView) findViewById(R.id.menuMed);
+
+        menuMed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MeditationActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // 2. mainActivity 화면 넘어가기
         menuHome = (ImageView) findViewById(R.id.menuHome);
 
@@ -94,7 +105,6 @@ public class Week2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 

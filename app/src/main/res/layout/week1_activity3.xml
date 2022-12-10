@@ -33,10 +33,7 @@
                 android:id="@+id/musicButton"
                 android:padding="0dp"
                 android:src="@drawable/music_states"/>
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,11 +75,12 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_weight="1.5">
+        android:layout_weight="1.5"
+        android:orientation="vertical">
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:stretchColumns="*"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -120,16 +118,19 @@
             <TableRow
                 android:minHeight="80dp">
                 <EditText
+                    android:id="@+id/row1col1"
                     android:hint="예) 지루함 외로움\n 같은 힘든 감정"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
+                    android:id="@+id/row1col2"
                     android:hint="게임, TV 보기"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
+                    android:id="@+id/row1col3"
                     android:hint="학습이나 취업에\n 방해"
                     android:textSize="14dp"
                     android:background="@null"
@@ -140,16 +141,19 @@
             <TableRow
                 android:minHeight="80dp">
                 <EditText
+                    android:id="@+id/row2col1"
                     android:hint="예) 지루함 외로움\n 같은 힘든 감정"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
+                    android:id="@+id/row2col2"
                     android:hint="게임, TV 보기"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
+                    android:id="@+id/row2col3"
                     android:hint="학습이나 취업에\n 방해"
                     android:textSize="14dp"
                     android:background="@null"
@@ -161,44 +165,34 @@
             <TableRow
                 android:minHeight="80dp">
                 <EditText
+                    android:id="@+id/row3col1"
                     android:hint="예) 지루함 외로움\n 같은 힘든 감정"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
+                    android:id="@+id/row3col2"
                     android:hint="게임, TV 보기"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
+                    android:id="@+id/row3col3"
                     android:hint="학습이나 취업에\n 방해"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
-            </TableRow>
-
-            <!--6째줄-->
-            <TableRow
-                android:minHeight="80dp">
-                <EditText
-                    android:hint="예) 지루함 외로움\n 같은 힘든 감정"
-                    android:textSize="14dp"
-                    android:background="@null"
-                    android:maxLines="3"/>
-                <EditText
-                    android:hint="게임, TV 보기"
-                    android:textSize="14dp"
-                    android:background="@null"
-                    android:maxLines="3"/>
-                <EditText
-                    android:hint="학습이나 취업에\n 방해"
-                    android:textSize="14dp"
-                    android:background="@null"
-                    android:maxLines="3"/>
-
             </TableRow>
 
         </TableLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:text="저장"
+            android:layout_marginTop="5dp"/>
 
     </LinearLayout>
 
@@ -215,12 +209,12 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/menuBookmark"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/menuMed"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/bookmark" />
+                android:src="@drawable/meditation" />
 
             <ImageView
                 android:id="@+id/menuHome"

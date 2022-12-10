@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="20dp"
@@ -19,15 +20,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ACT란 무엇인가요?"
+            android:text="명상하기"
             android:textSize="28sp"/>
 
         <ImageButton
-            android:id="@+id/closeButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:id="@+id/closebutton"
             android:padding="0dp"
-            android:src="@drawable/close_logo" />
+            android:src="@drawable/close_logo"/>
 
     </LinearLayout>
 
@@ -61,37 +62,30 @@
 
 
         <ImageButton
-            android:id="@+id/tenBackward"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:id="@+id/tenBackward"
             android:padding="0dp"
             android:src="@drawable/tenbackward_logo"/>
 
         <ImageButton
-            android:id="@+id/playButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:id="@+id/playButton"
             android:padding="0dp"
             android:src="@drawable/play_logo"/>
 
         <ImageButton
-            android:id="@+id/pauseButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/pause_logo"
-            android:visibility="gone"/>
-
-        <ImageButton
             android:id="@+id/tenForward"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
             android:padding="0dp"
             android:src="@drawable/tenforward_logo"/>
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/explanation"
+        android:id="@+id/week1ActivityBtn1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:backgroundTint="#E2E2E2"

@@ -32,16 +32,24 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
         </activity>
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".ThirdActivity" />
-        <activity android:name=".PersonalSettingActivity" />
+        <activity android:name=".SignupActivity"/>
+        <activity android:name=".Tutorial"/>
+        <activity android:name=".TutorialActivity1"/>
+        <activity android:name=".TutorialActivity2"/>
+        <activity android:name=".TutorialActivity3"/>
+        <activity android:name=".Week1"/>
+        <activity android:name=".Week1Activity1"/>
+        <activity android:name=".Week1Activity2"/>
+        <activity android:name=".Week1Activity3"/>
+        <activity android:name=".Week1Activity4"/>
+        <activity android:name=".Week1Activity5"/>
+        <activity android:name=".Week1Activity6"/>
+        <activity android:name=".Week1Activity7"/>
         <activity android:name=".Week2"/>
         <activity android:name=".Week2Activity1"/>
         <activity android:name=".Week2Activity2"/>
@@ -58,6 +66,8 @@
         <activity android:name=".Week3Activity5"/>
         <activity android:name=".Week3Activity6"/>
         <activity android:name=".Week3Activity7"/>
+        <activity android:name=".PersonalSettingActivity"/>
+        <activity android:name=".MeditationActivity"/>
         <receiver android:name=".alarm.AlertReceiver"/>
     </application>
 

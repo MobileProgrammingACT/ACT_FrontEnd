@@ -254,12 +254,12 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/menuBookmark"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/menuMed"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/bookmark" />
+                android:src="@drawable/meditation" />
 
             <ImageView
                 android:id="@+id/menuHome"

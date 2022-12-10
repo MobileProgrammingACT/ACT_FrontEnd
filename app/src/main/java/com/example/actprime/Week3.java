@@ -13,7 +13,7 @@ public class Week3 extends AppCompatActivity {
 
     Button week3ActivityBtn1, week3ActivityBtn2, week3ActivityBtn3, week3ActivityBtn4, week3ActivityBtn5, week3ActivityBtn6, week3ActivityBtn7;
     View alertDialog;
-    ImageView menuBookmark, menuHome ,menuSetting;
+    ImageView menuMed, menuHome ,menuSetting;
 
 
     @Override
@@ -86,6 +86,17 @@ public class Week3 extends AppCompatActivity {
         });
 
         // 하단 네비게이션 바 활성화
+        // 1. meditation 화면 넘어가기
+        menuMed = (ImageView) findViewById(R.id.menuMed);
+
+        menuMed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MeditationActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // 2. mainActivity 화면 넘어가기
         menuHome = (ImageView) findViewById(R.id.menuHome);
 
@@ -94,7 +105,6 @@ public class Week3 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -108,7 +118,5 @@ public class Week3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }

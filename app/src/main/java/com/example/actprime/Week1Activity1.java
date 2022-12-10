@@ -16,24 +16,25 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.EditText;
 
+import com.example.actprime.Week1;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.os.Handler;
 
-public class ThirdActivity extends AppCompatActivity {
+public class Week1Activity1 extends AppCompatActivity {
 
     /*DB 저장 정의용 - 위치 변경 X!!!*/
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference ref = db.getReference();
 
     Button explain1,btnNext, btnPrev, btnEnd, submit;
-    ImageView menuBookmark, menuHome ,menuSetting;
+    ImageView menuMed, menuHome ,menuSetting;
     ImageButton musicButton;
     View activity1ExView;
     EditText content;
     ViewFlipper vFlipper;
     MediaPlayer musicPlayer;
-    String shared = "file"; //Edittext 값 저장용
+    String shared = "file"; //Edittext 값 저장용 -> 추후 삭제 예정
     int count = 0;
 
     @Override
@@ -49,14 +50,14 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 writereview(content.getText().toString());
-                Toast.makeText(ThirdActivity.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Week1Activity1.this, "저장했습니다", Toast.LENGTH_SHORT).show();
 
+                // 저장버튼 누른 이후 3분 카운트 : 현재 1분
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        //btn2
-                        ((SecondActivity)SecondActivity.mContext).week1ActivityBtn2.setEnabled(true);
+                        ((Week1) Week1.mContext).week1ActivityBtn2.setEnabled(true);
                     }
                 }, 60000);
             }
@@ -89,8 +90,8 @@ public class ThirdActivity extends AppCompatActivity {
         content = (EditText) findViewById(R.id.content);
 
         /*화면에 진입했을 때 활동에 관한 설명이 바로 뜨게하기 */
-        activity1ExView = (View) View.inflate(ThirdActivity.this, R.layout.week1_activity1_explanation, null);
-        AlertDialog.Builder a1EX = new AlertDialog.Builder(ThirdActivity.this);
+        activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.week1_activity1_explanation, null);
+        AlertDialog.Builder a1EX = new AlertDialog.Builder(Week1Activity1.this);
         AlertDialog exit = a1EX.create();
         AlertDialog window = a1EX.create();
         window.setView(activity1ExView);
@@ -147,90 +148,103 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
 
-        /*설명버튼(?버튼)을 누르면 다시 설명이 뜨게 */
+        /*설명버튼을 누르면 다시 설명이 뜨게 */
         explain1 = (Button) findViewById(R.id.explanation);
         explain1.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            activity1ExView = (View) View.inflate(ThirdActivity.this, R.layout.week1_activity1_explanation, null);
-                                            AlertDialog.Builder a1EX = new AlertDialog.Builder(ThirdActivity.this);
-                                            AlertDialog window = a1EX.create();
-                                            window.setView(activity1ExView);
-                                            window.show();
 
-                                            vFlipper = (ViewFlipper) activity1ExView.findViewById(R.id.viewFlipper1);
-                                            btnNext = (Button) activity1ExView.findViewById(R.id.btnNext);
-                                            btnPrev = (Button) activity1ExView.findViewById(R.id.btnPrev);
-                                            btnEnd = (Button) activity1ExView.findViewById(R.id.btnEnd);
-                                            btnEnd.setVisibility(View.GONE);
-                                            btnPrev.setVisibility(View.INVISIBLE);
+            @Override
+            public void onClick(View v) {
+                activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.week1_activity1_explanation, null);
+                AlertDialog.Builder a1EX = new AlertDialog.Builder(Week1Activity1.this);
+                AlertDialog window = a1EX.create();
+                window.setView(activity1ExView);
+                window.show();
 
-                                            btnNext.setOnClickListener(new View.OnClickListener() {
-                                                @Override
-                                                public void onClick(View v) {
-                                                    vFlipper.showNext();
-                                                    count++;
-                                                    if (count == 0)
-                                                        btnPrev.setVisibility(View.INVISIBLE);
-                                                    else if (count == 1) {
-                                                        btnPrev.setVisibility(View.VISIBLE);
-                                                        btnNext.setVisibility(View.VISIBLE);
-                                                        btnEnd.setVisibility(View.GONE);
-                                                    } else if (count == 2) {
-                                                        btnNext.setVisibility(View.GONE);
-                                                        btnEnd.setVisibility(View.VISIBLE);
-                                                    }
-                                                }
-                                            });
-                                            btnPrev.setOnClickListener(new View.OnClickListener() {
-                                                @Override
-                                                public void onClick(View v) {
-                                                    vFlipper.showPrevious();
-                                                    count--;
-                                                    if (count == 0)
-                                                        btnPrev.setVisibility(View.INVISIBLE);
-                                                    else if (count == 1) {
-                                                        btnPrev.setVisibility(View.VISIBLE);
-                                                        btnNext.setVisibility(View.VISIBLE);
-                                                        btnEnd.setVisibility(View.GONE);
-                                                    } else if (count == 2) {
-                                                        btnNext.setVisibility(View.GONE);
-                                                        btnEnd.setVisibility(View.VISIBLE);
-                                                    }
-                                                }
-                                            });
-                                            btnEnd.setOnClickListener(new View.OnClickListener() {
-                                                @Override
-                                                public void onClick(View v) {
-                                                    count = 0;
-                                                    window.dismiss();
-                                                }
-                                            });
-                                        }
-                                    });
-                // 하단 네비게이션 바 활성화
-                // 2. mainActivity 화면 넘어가기
-                menuHome = (ImageView) findViewById(R.id.menuHome);
+                vFlipper = (ViewFlipper) activity1ExView.findViewById(R.id.viewFlipper1);
+                btnNext = (Button) activity1ExView.findViewById(R.id.btnNext);
+                btnPrev = (Button) activity1ExView.findViewById(R.id.btnPrev);
+                btnEnd = (Button) activity1ExView.findViewById(R.id.btnEnd);
+                btnEnd.setVisibility(View.GONE);
+                btnPrev.setVisibility(View.INVISIBLE);
 
-                menuHome.setOnClickListener(new View.OnClickListener() {
+                btnNext.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
+                    public void onClick(View v) {
+                        vFlipper.showNext();
+                        count++;
+                        if (count == 0)
+                            btnPrev.setVisibility(View.INVISIBLE);
+                        else if (count == 1) {
+                            btnPrev.setVisibility(View.VISIBLE);
+                            btnNext.setVisibility(View.VISIBLE);
+                            btnEnd.setVisibility(View.GONE);
+                        } else if (count == 2) {
+                            btnNext.setVisibility(View.GONE);
+                            btnEnd.setVisibility(View.VISIBLE);
+                        }
                     }
                 });
-
-                // 3. personal_setting 화면 넘어가기
-                menuSetting = (ImageView) findViewById(R.id.menuSetting);
-
-                menuSetting.setOnClickListener(new View.OnClickListener() {
+                btnPrev.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(getApplicationContext(), PersonalSettingActivity.class);
-                        startActivity(intent);
+                    public void onClick(View v) {
+                        vFlipper.showPrevious();
+                        count--;
+                        if (count == 0)
+                            btnPrev.setVisibility(View.INVISIBLE);
+                        else if (count == 1) {
+                            btnPrev.setVisibility(View.VISIBLE);
+                            btnNext.setVisibility(View.VISIBLE);
+                            btnEnd.setVisibility(View.GONE);
+                        } else if (count == 2) {
+                            btnNext.setVisibility(View.GONE);
+                            btnEnd.setVisibility(View.VISIBLE);
+                        }
+                    }
+                });
+                btnEnd.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        count = 0;
+                        window.dismiss();
                     }
                 });
             }
+        });
+
+        // 하단 네비게이션 바 활성화
+        // 1. meditation 화면 넘어가기
+        menuMed = (ImageView) findViewById(R.id.menuMed);
+
+        menuMed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MeditationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 2. mainActivity 화면 넘어가기
+        menuHome = (ImageView) findViewById(R.id.menuHome);
+
+        menuHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 3. personal_setting 화면 넘어가기
+        menuSetting = (ImageView) findViewById(R.id.menuSetting);
+
+        menuSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalSettingActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
     /*Edittext 값 외부로 나간 이후에도 저장가능한 메소드*/
     @Override
     protected void onDestroy() {
