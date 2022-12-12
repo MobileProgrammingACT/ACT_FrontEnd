@@ -19,7 +19,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ACT란 무엇인가요?"
+            android:text="2주차 목표: 가치 찾기"
             android:textSize="28sp"/>
 
         <ImageButton
@@ -49,16 +49,8 @@
     </LinearLayout>
 
     <SeekBar
-        android:id="@+id/seekBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:thumb="@drawable/custom_seekbar_thumb"
-        android:progressDrawable="@drawable/custom_seekbar_progress"
-        android:splitTrack="false"/>
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,20 +59,18 @@
         android:orientation="horizontal"
         android:gravity="center|top">
 
+
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/tenBackward"
-            android:background="@drawable/round2"
             android:padding="0dp"
-            android:layout_marginRight="10dp"
             android:src="@drawable/tenbackward_logo"/>
 
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/playButton"
-            android:background="@drawable/round2"
             android:padding="0dp"
             android:src="@drawable/play_logo"/>
 
@@ -88,9 +78,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/tenForward"
-            android:background="@drawable/round2"
             android:padding="0dp"
-            android:layout_marginLeft="10dp"
             android:src="@drawable/tenforward_logo"/>
 
     </LinearLayout>

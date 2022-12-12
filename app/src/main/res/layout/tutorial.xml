@@ -70,10 +70,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -84,7 +80,7 @@
                     android:id="@+id/tutorial1"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:backgroundTint="#FF9999"
+                    android:backgroundTint="#e7e7e7"
                     android:text="ACT란 무엇인가요?"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -94,7 +90,7 @@
                     android:id="@+id/tutorial2"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:backgroundTint="#FFF176"
+                    android:backgroundTint="#e7e7e7"
                     android:text="나에게 도움이 될까요?"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -104,15 +100,19 @@
                     android:id="@+id/tutorial3"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:backgroundTint="#50F097"
+                    android:backgroundTint="#e7e7e7"
                     android:text="나를 점검해 봅시다"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"/>
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/haeyo_remove"/>
+
             </LinearLayout>
 
-        </ScrollView>
     </LinearLayout>
 
     <!--하단 메뉴바-->

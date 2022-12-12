@@ -70,11 +70,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -84,8 +79,8 @@
                     android:id="@+id/week1ActivityBtn1"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:backgroundTint="#FF9999"
-                    android:text="이제 괜찮을까요?"
+                    android:backgroundTint="#e9e9e9"
+                    android:text="다시 점검해봅시다"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"/>
@@ -94,25 +89,20 @@
                     android:id="@+id/week1ActivityBtn2"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:backgroundTint="#FFF176"
-                    android:text="나에게 도움이 될까요?"
+                    android:backgroundTint="#e9e9e9"
+                    android:text="앞으로 어떡하죠?"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/week1ActivityBtn3"
+
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:backgroundTint="#50F097"
-                    android:text="나를 점검해 봅시다"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_height="match_parent"
+                    android:src="@drawable/haeyo_remove"/>
 
             </LinearLayout>
 
-        </ScrollView>
     </LinearLayout>
 
 

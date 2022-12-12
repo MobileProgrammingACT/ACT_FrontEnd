@@ -69,7 +69,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:text="한 주 활동을 완료하였습니다. 축하합니다!
             \n당신은 이제 ACT의 마지막 주를 완료했습니다.
             \n지난 한주간을 돌이켜 보며 어떤 경혐이었고, 어떤 생각이
@@ -92,7 +92,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="8"
-            android:background="#e9e9e9"
+            android:padding="10dp"
+            android:background="@drawable/border"
             android:gravity="top"
             android:hint="당신의 생각을 적어봅시다."/>
 

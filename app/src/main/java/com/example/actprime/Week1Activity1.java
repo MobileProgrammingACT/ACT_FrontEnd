@@ -90,7 +90,7 @@ public class Week1Activity1 extends AppCompatActivity {
         content = (EditText) findViewById(R.id.content);
 
         /*화면에 진입했을 때 활동에 관한 설명이 바로 뜨게하기 */
-        activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.week1_activity1_explanation, null);
+        activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.explanation, null);
         AlertDialog.Builder a1EX = new AlertDialog.Builder(Week1Activity1.this);
         AlertDialog exit = a1EX.create();
         AlertDialog window = a1EX.create();
@@ -154,7 +154,7 @@ public class Week1Activity1 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.week1_activity1_explanation, null);
+                activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.explanation, null);
                 AlertDialog.Builder a1EX = new AlertDialog.Builder(Week1Activity1.this);
                 AlertDialog window = a1EX.create();
                 window.setView(activity1ExView);
