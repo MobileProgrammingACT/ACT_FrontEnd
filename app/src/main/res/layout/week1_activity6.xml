@@ -160,12 +160,13 @@
             android:layout_marginTop="5dp"/>
 
         <TextView
+            android:id="@+id/text0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="이제 이것을 수용하고 벗어난다면 어떻게 될까요?\n이제 더는 씨름하지 않고 살아갈 준비가 되었나요?"
             android:gravity="center_horizontal"
-            android:layout_marginTop="15dp"/>
-        <!--invisible-->
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -175,16 +176,20 @@
             android:layout_marginTop="15dp">
 
             <TextView
+                android:id="@+id/text1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="예) 내가 불안하지 않다면, "
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:visibility="invisible"/>
             <!--textView.setPaintFlags(textView.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);-->
             <TextView
+                android:id="@+id/text1_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="나는 데이트하러 갈 수 있어."
-                android:textSize="14dp"/>
+                android:textSize="14dp"
+                android:visibility="invisible"/>
 
         </LinearLayout>
 
@@ -195,16 +200,20 @@
             android:gravity="center_horizontal">
 
             <TextView
+                android:id="@+id/text2_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="예) 내가 이런 기억이 없다면, "
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:visibility="invisible"/>
             <!--textView.setPaintFlags(textView.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);-->
             <TextView
+                android:id="@+id/text2_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="나는 더 활동적일 수 있어."
-                android:textSize="14dp"/>
+                android:textSize="14dp"
+                android:visibility="invisible"/>
 
         </LinearLayout>
 
@@ -220,7 +229,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="reasonText"
-                android:textSize="13dp"/>
+                android:textSize="13dp"
+                android:visibility="invisible"/>
             <!--textView.setPaintFlags(textView.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);-->
             <TextView
                 android:id="@+id/resultTV"
@@ -228,7 +238,8 @@
                 android:layout_height="wrap_content"
                 android:text="resultText"
                 android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:visibility="invisible"/>
 
         </LinearLayout>
 
@@ -238,7 +249,8 @@
             android:layout_height="40dp"
             android:layout_gravity="right"
             android:text="확인"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 
