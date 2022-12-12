@@ -27,12 +27,10 @@ public class Week1Activity1 extends AppCompatActivity {
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference ref = db.getReference();
 
-    Button explain1,btnNext, btnPrev, btnEnd, submit;
+    Button submit;
     ImageView menuMed, menuHome ,menuSetting;
     ImageButton musicButton;
-    View activity1ExView;
     EditText content;
-    ViewFlipper vFlipper;
     MediaPlayer musicPlayer;
     String shared = "file"; //Edittext 값 저장용 -> 추후 삭제 예정
     int count = 0;
@@ -51,7 +49,9 @@ public class Week1Activity1 extends AppCompatActivity {
             public void onClick(View view) {
                 writereview(content.getText().toString());
                 Toast.makeText(Week1Activity1.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+                ((Week1) Week1.mContext).week1ActivityBtn2.setEnabled(true);
 
+                /**
                 // 저장버튼 누른 이후 3분 카운트 : 현재 1분
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -59,7 +59,7 @@ public class Week1Activity1 extends AppCompatActivity {
                     public void run() {
                         ((Week1) Week1.mContext).week1ActivityBtn2.setEnabled(true);
                     }
-                }, 60000);
+                }, 60000);*/
             }
         });
 
@@ -83,131 +83,6 @@ public class Week1Activity1 extends AppCompatActivity {
                 } else {
                     musicPlayer.start();
                 }
-            }
-        });
-
-        submit = (Button) findViewById(R.id.submit);
-        content = (EditText) findViewById(R.id.content);
-
-        /*화면에 진입했을 때 활동에 관한 설명이 바로 뜨게하기 */
-        activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.explanation, null);
-        AlertDialog.Builder a1EX = new AlertDialog.Builder(Week1Activity1.this);
-        AlertDialog exit = a1EX.create();
-        AlertDialog window = a1EX.create();
-        window.setView(activity1ExView);
-        window.show();
-
-        vFlipper = (ViewFlipper) activity1ExView.findViewById(R.id.viewFlipper1);
-        btnNext = (Button) activity1ExView.findViewById(R.id.btnNext);
-        btnPrev = (Button) activity1ExView.findViewById(R.id.btnPrev);
-        btnEnd = (Button) activity1ExView.findViewById(R.id.btnEnd);
-        btnEnd.setVisibility(View.GONE);
-        btnPrev.setVisibility(View.INVISIBLE);
-
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                vFlipper.showNext();
-                count++;
-                if(count==0)
-                    btnPrev.setVisibility(View.INVISIBLE);
-                else if(count==1) {
-                    btnPrev.setVisibility(View.VISIBLE);
-                    btnNext.setVisibility(View.VISIBLE);
-                    btnEnd.setVisibility(View.GONE);
-                }
-                else if(count==2) {
-                    btnNext.setVisibility(View.GONE);
-                    btnEnd.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-        btnPrev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                vFlipper.showPrevious();
-                count--;
-                if(count==0)
-                    btnPrev.setVisibility(View.INVISIBLE);
-                else if(count==1) {
-                    btnPrev.setVisibility(View.VISIBLE);
-                    btnNext.setVisibility(View.VISIBLE);
-                    btnEnd.setVisibility(View.GONE);
-                }
-                else if(count==2) {
-                    btnNext.setVisibility(View.GONE);
-                    btnEnd.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-        btnEnd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count = 0;
-                window.dismiss();
-            }
-        });
-
-        /*설명버튼을 누르면 다시 설명이 뜨게 */
-        explain1 = (Button) findViewById(R.id.explanation);
-        explain1.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                activity1ExView = (View) View.inflate(Week1Activity1.this, R.layout.explanation, null);
-                AlertDialog.Builder a1EX = new AlertDialog.Builder(Week1Activity1.this);
-                AlertDialog window = a1EX.create();
-                window.setView(activity1ExView);
-                window.show();
-
-                vFlipper = (ViewFlipper) activity1ExView.findViewById(R.id.viewFlipper1);
-                btnNext = (Button) activity1ExView.findViewById(R.id.btnNext);
-                btnPrev = (Button) activity1ExView.findViewById(R.id.btnPrev);
-                btnEnd = (Button) activity1ExView.findViewById(R.id.btnEnd);
-                btnEnd.setVisibility(View.GONE);
-                btnPrev.setVisibility(View.INVISIBLE);
-
-                btnNext.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        vFlipper.showNext();
-                        count++;
-                        if (count == 0)
-                            btnPrev.setVisibility(View.INVISIBLE);
-                        else if (count == 1) {
-                            btnPrev.setVisibility(View.VISIBLE);
-                            btnNext.setVisibility(View.VISIBLE);
-                            btnEnd.setVisibility(View.GONE);
-                        } else if (count == 2) {
-                            btnNext.setVisibility(View.GONE);
-                            btnEnd.setVisibility(View.VISIBLE);
-                        }
-                    }
-                });
-                btnPrev.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        vFlipper.showPrevious();
-                        count--;
-                        if (count == 0)
-                            btnPrev.setVisibility(View.INVISIBLE);
-                        else if (count == 1) {
-                            btnPrev.setVisibility(View.VISIBLE);
-                            btnNext.setVisibility(View.VISIBLE);
-                            btnEnd.setVisibility(View.GONE);
-                        } else if (count == 2) {
-                            btnNext.setVisibility(View.GONE);
-                            btnEnd.setVisibility(View.VISIBLE);
-                        }
-                    }
-                });
-                btnEnd.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        count = 0;
-                        window.dismiss();
-                    }
-                });
             }
         });
 

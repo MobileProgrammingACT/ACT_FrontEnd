@@ -23,7 +23,7 @@ public class Week1Activity3 extends AppCompatActivity {
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference ref = db.getReference();
 
-    Button explanation, submit;
+    Button submit;
     ImageView menuMed, menuHome ,menuSetting;
     EditText row1col1, row1col2, row1col3, row2col1, row2col2, row2col3, row3col1, row3col2, row3col3;
     ImageButton musicButton;
@@ -46,25 +46,29 @@ public class Week1Activity3 extends AppCompatActivity {
         row3col2 = (EditText) findViewById(R.id.row3col2);
         row3col3 = (EditText) findViewById(R.id.row3col3);
         submit = (Button) findViewById(R.id.submit);
+        musicButton = (ImageButton) findViewById(R.id.musicButton);
 
         /*저장 메소드 - writereview불러오기*/
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String content;
-                content = row1col1.getText().toString() + "/" + row1col2.getText().toString() + "/" + row1col3.getText().toString();
-                // DB 구조상 여러 행에 작성된 내용을 한번에 적기가 이쁘질 않아서.. firestore 시도해볼 예정
-                writereview(content);
+                String content1, content2, content3, fullcontent;
+                content1 = row1col1.getText().toString() + ", " + row1col2.getText().toString() + ", " + row1col3.getText().toString();
+                content2 = row2col1.getText().toString() + ", " + row2col2.getText().toString() + ", " + row2col3.getText().toString();
+                content3 = row3col1.getText().toString() + ", " + row3col2.getText().toString() + ", " + row3col3.getText().toString();
+                fullcontent = content1 + "/" + content2 + "/" + content3;
+                writereview(fullcontent);
                 Toast.makeText(Week1Activity3.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+                ((Week1) Week1.mContext).week1ActivityBtn4.setEnabled(true);
 
-                // 저장버튼 누른 이후 3분 카운트 : 현재 1분
-                Handler handler = new Handler();
+                // 저장버튼 누른 이후 3분 카운트 w1a3부터 미적용
+                /**Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         ((Week1) Week1.mContext).week1ActivityBtn4.setEnabled(true);
                     }
-                }, 60000);
+                }, 60000);**/
             }
         });
 
@@ -105,23 +109,11 @@ public class Week1Activity3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        SharedPreferences  sharedPreferences = getSharedPreferences(shared, 0);
-        SharedPreferences.Editor editor  = sharedPreferences.edit();
-        String value = row1col1.getText().toString();
-        editor.putString("key", value);
-        editor.commit();
     }
 
-        /*작성하는 메소드 writereview 정의, DB에 저장되는 방식 "review"키 값 내에 저장하기*/
-        public void writereview(String content) {
-            WriteReview writereview = new WriteReview(content);
-            ref.child("Act").child("Week1").child("week1act3").setValue(content);
-        }
-
-
+    /*작성하는 메소드 writereview 정의, DB에 저장되는 방식 "review"키 값 내에 저장하기*/
+    public void writereview(String content) {
+        WriteReview writereview = new WriteReview(content);
+        ref.child("Act").child("Week1").child("week1act3").setValue(content);
+    }
 }

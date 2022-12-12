@@ -24,9 +24,9 @@
             android:textSize="28sp"/>
 
         <ImageButton
+            android:id="@+id/closeButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/closebutton"
             android:padding="0dp"
             android:src="@drawable/close_logo"/>
 
@@ -69,26 +69,35 @@
         android:gravity="center|top">
 
         <ImageButton
+            android:id="@+id/tenBackward"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/tenBackward"
             android:background="@drawable/round2"
             android:padding="0dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/tenbackward_logo"/>
 
         <ImageButton
+            android:id="@+id/playButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/playButton"
             android:background="@drawable/round2"
             android:padding="0dp"
             android:src="@drawable/play_logo"/>
 
         <ImageButton
+            android:id="@+id/pauseButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:background="@drawable/round2"
+            android:padding="0dp"
+            android:src="@drawable/pause_logo"
+            android:visibility="gone"/>
+
+        <ImageButton
             android:id="@+id/tenForward"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@drawable/round2"
             android:padding="0dp"
             android:layout_marginLeft="10dp"
@@ -97,7 +106,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/week1ActivityBtn1"
+        android:id="@+id/explanation"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:backgroundTint="#E2E2E2"

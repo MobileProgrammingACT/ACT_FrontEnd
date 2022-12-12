@@ -68,6 +68,9 @@
         <activity android:name=".Week3Activity7"/>
         <activity android:name=".PersonalSettingActivity"/>
         <activity android:name=".MeditationActivity"/>
+        <activity android:name=".Meditation1"/>
+        <activity android:name=".Meditation2"/>
+        <activity android:name=".Meditation3"/>
         <receiver android:name=".alarm.AlertReceiver"/>
     </application>
 

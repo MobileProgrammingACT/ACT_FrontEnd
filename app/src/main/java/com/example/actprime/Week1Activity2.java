@@ -23,7 +23,7 @@ public class Week1Activity2 extends AppCompatActivity {
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference ref = db.getReference();
 
-    Button explanation, submit;
+    Button submit;
     ImageView menuMed, menuHome ,menuSetting;
     EditText content;
     ImageButton musicButton;
@@ -45,7 +45,9 @@ public class Week1Activity2 extends AppCompatActivity {
             public void onClick(View view) {
                 writereview(content.getText().toString());
                 Toast.makeText(Week1Activity2.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+                ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
 
+                /**
                 // 저장버튼 누른 이후 3분 카운트 : 현재 1분
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -54,7 +56,7 @@ public class Week1Activity2 extends AppCompatActivity {
                         //btn2
                         ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
                     }
-                }, 60000);
+                }, 60000);*/
             }
         });
 

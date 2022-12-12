@@ -28,6 +28,9 @@ public class TutorialActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tutorial_activity3);
 
+        submit = (Button) findViewById(R.id.submit);
+        closeButton = (ImageButton) findViewById(R.id.closeButton);
+
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

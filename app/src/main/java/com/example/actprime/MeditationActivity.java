@@ -11,13 +11,41 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MeditationActivity extends AppCompatActivity {
 
-    Button medexplain, meditation1, meditation2;
+    Button meditation1, meditation2, meditation3;
     ImageView menuMed, menuHome, menuSetting;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.meditation);
+
+        meditation1 = (Button) findViewById(R.id.meditation1);
+        meditation2 = (Button) findViewById(R.id.meditation2);
+        meditation3 = (Button) findViewById(R.id.meditation3);
+
+        meditation1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Meditation1.class);
+                startActivity(intent);
+            }
+        });
+
+        meditation2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Meditation2.class);
+                startActivity(intent);
+            }
+        });
+
+        meditation3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Meditation3.class);
+                startActivity(intent);
+            }
+        });
 
         // 하단 네비게이션 바 활성화
         // 1. meditation 화면 넘어가기

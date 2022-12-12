@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -25,7 +26,7 @@
                 android:text="DAY4"
                 android:textSize="50dp"/>
 
-            <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
+            <!--필요없을 듯?-->
             <ImageButton
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -114,26 +115,35 @@
             android:gravity="center|top">
 
             <ImageButton
+                android:id="@+id/tenBackward"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:id="@+id/tenBackward"
                 android:background="@drawable/round3"
                 android:padding="0dp"
                 android:layout_marginRight="10dp"
                 android:src="@drawable/tenbackward_logo"/>
 
             <ImageButton
+                android:id="@+id/playButton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:id="@+id/playButton"
                 android:background="@drawable/round3"
                 android:padding="0dp"
                 android:src="@drawable/play_logo"/>
 
             <ImageButton
+                android:id="@+id/pauseButton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:background="@drawable/round3"
+                android:padding="0dp"
+                android:src="@drawable/pause_logo"
+                android:visibility="gone"/>
+
+            <ImageButton
                 android:id="@+id/tenForward"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@drawable/round3"
                 android:padding="0dp"
                 android:layout_marginLeft="10dp"
