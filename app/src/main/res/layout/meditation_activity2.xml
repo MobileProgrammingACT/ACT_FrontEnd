@@ -19,7 +19,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="나에게 도움이 될까요?"
+            android:text="편하게 할 수는 없나요?"
             android:textSize="28sp"/>
 
         <ImageButton
@@ -43,7 +43,7 @@
             android:paddingRight="20dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:src="@drawable/tutorial_2"
+            android:src="@drawable/tutorial_1"
             android:scaleType="fitXY"/>
 
     </LinearLayout>

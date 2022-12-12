@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:id="@+id/surveyResult1">
+
+        <TextView
+            android:id="@+id/surveyScore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="당신의 점수는 **점입니다."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="처음 결과와 비교했을 때 점수가 어떻게
+            \n달라졌나요? 만약 점수가 줄었다면, 당신이
+            \n생각에 덜 얽매이고 감정을 더 많이 받아들일 수 있고, 이런 것들이 더 이상 방해물이 되도록
+            \n내버려 두지 않는 상태라는 것입니다.
+            \n점수가 증가했거나 그대로라해도 낙담할 필요는 없습니다. 앞으로 더 연습하면 됩니다. 당신의
+            \n점수가 어떤 의미인지 한번 생각해 봅시다. "/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal" >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/btnEnd"
+            android:text="닫기" />
+
+    </LinearLayout>
+
+</LinearLayout>
