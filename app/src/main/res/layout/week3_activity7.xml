@@ -7,8 +7,7 @@
     <!--주차 제목 & activity제목 & activity 소개-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
@@ -23,8 +22,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WEEK3"
-                android:textSize="50dp"/>
+                android:text="DAY21"
+                android:textSize="50sp"/>
 
             <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
             <ImageButton
@@ -36,32 +35,45 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
-            <!--나중에 이미지 버튼으로 바꿀예정-->
+
+            <!--나중에 이미지 버튼으로 바꿀예정
             <Button
                 android:id="@+id/explanation"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="설명"/>
 
+            -->
+
+            <ImageButton
+                android:id="@+id/goBackIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_logo"
+                android:background="@drawable/round2"
+                android:layout_marginRight="15dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="당신의 생각은 실제가 아니다"
-                android:layout_marginLeft="10dp"
+                android:text="한 주 마무리: 생각해 보기"
                 android:textSize="20dp"/>
+
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
-            android:text="당신은 어떤 생각에 융합되거나 뒤엉켜 있거나 걸려있나요? \n생각이 과거나 미래에 관한 것이거나, 자신에 관한 것이거나, \n판단, 이유, 규칙에 관한 것인가요? \n이것이 당신의 삶에 어떻게 영향을 끼치나요? " />
+            android:text="한 주 활동을 완료하였습니다. 축하합니다!
+            \n당신은 이제 ACT의 마지막 주를 완료했습니다.
+            \n지난 한주간을 돌이켜 보며 어떤 경혐이었고, 어떤 생각이
+            \n들었는지 정리해봅시다." />
 
     </LinearLayout>
 
@@ -84,7 +96,7 @@
             android:gravity="top"
             android:hint="당신의 생각을 적어봅시다."/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit"
             android:layout_width="70dp"
             android:layout_height="50dp"

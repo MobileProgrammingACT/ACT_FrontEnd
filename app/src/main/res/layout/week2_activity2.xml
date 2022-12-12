@@ -7,8 +7,7 @@
     <!--주차 제목 & activity제목 & activity 소개-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
@@ -23,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WEEK2"
+                android:text="DAY9"
                 android:textSize="50dp"/>
 
             <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
@@ -42,26 +41,41 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
-            <!--나중에 이미지 버튼으로 바꿀예정-->
+
+            <!--나중에 이미지 버튼으로 바꿀예정
             <Button
                 android:id="@+id/explanation"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="설명"/>
+            -->
+
+            <ImageButton
+                android:id="@+id/goBackIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_logo"
+                android:background="@drawable/round2"
+                android:layout_marginRight="15dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="당신의 생각은 실제가 아니다"
-                android:layout_marginLeft="10dp"
+                android:text="가치 문장 적기"
                 android:textSize="20dp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:text="당신은 어떤 생각에 융합되거나 뒤엉켜 있거나 걸려있나요? \n생각이 과거나 미래에 관한 것이거나, 자신에 관한 것이거나, \n판단, 이유, 규칙에 관한 것인가요? \n이것이 당신의 삶에 어떻게 영향을 끼치나요? " />
+            android:layout_marginTop="15dp"
+            android:text="이번에는 여러 영역에서 당신에게 중요한 것들을 적어봅시다.
+            \n한가지 기억할 것은 가치는 목표가 아니기에 ‘부모님에게 하루
+            \n한 번 이상 전화하겠다’라고 적는 것이 아니라 ‘부모님에게
+            \n사랑받는 딸이 되겠다’같이 적어야 합니다. 다소 어려울 수
+            \n있으므로 조금 시간을 가져 보는 것도 좋습니다. 당신의 가족,
+            \n관계, 친구, 양육, 교육/고용, 여가, 건강, 단체 등에서 중요한 것은 무엇인가요? 이것은 당신의 가치이기에 해당하지 않는 것은
+            \n적지 않아도 좋습니다." />
 
     </LinearLayout>
 
@@ -84,7 +98,7 @@
             android:gravity="top"
             android:hint="당신의 생각을 적어봅시다."/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit"
             android:layout_width="70dp"
             android:layout_height="50dp"

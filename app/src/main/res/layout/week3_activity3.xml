@@ -7,8 +7,7 @@
     <!--설명이 들어갈 자리-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2.5"
+        android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
@@ -23,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WEEK3"
+                android:text="DAY17"
                 android:textSize="50dp"/>
 
             <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
@@ -43,46 +42,52 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
-            <!--나중에 이미지 버튼으로 바꿀예정-->
+
+            <!--나중에 이미지 버튼으로 바꿀예정
             <Button
                 android:id="@+id/explanation"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="설명"/>
+            -->
+
+            <ImageButton
+                android:id="@+id/goBackIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_logo"
+                android:background="@drawable/round2"
+                android:layout_marginRight="15dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="회피의 순환"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"/>
+                android:text="행동 활성화"
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:text="아래의 빈칸에 당신 내적의 힘듦, 회피 방법, 그리고 예상되는 결과를 채워봅시다.\n 그리고 어려운 경험으로부터 무엇을 배웠는지, 회피하기 위해 무엇을 하였는지, 회피함으로써 어떤 대가가 있었는지 적어봅시다." />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="전념행동이라고 해서 항상 운동같이 신체적 활동만을 의미하는 것은 아닙니다. 당신을 움직이게 하고 성취했을 때 기쁨을 느낄 수 있는 모든 활동이 전념행동이 될 수 있습니다. 아래의 예시를 보고 당신의 가치를 떠올려 봅시다. 그리고 빈칸을 채워 봅시다." />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000000"
-            android:layout_marginBottom="10dp"/>
     </LinearLayout>
 
     <!--활동이 들어갈 자리-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="1.5">
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:stretchColumns="*"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -92,16 +97,16 @@
             <TableRow
                 android:layout_marginBottom="5dp">
                 <TextView
-                    android:text="힘든 경험"
-                    android:textSize="20dp"
+                    android:text="날짜/시간"
+                    android:textSize="20sp"
                     android:layout_gravity="center"/>
                 <TextView
-                    android:text="회피 방법"
-                    android:textSize="20dp"
+                    android:text="전념행동"
+                    android:textSize="20sp"
                     android:layout_gravity="center"/>
                 <TextView
-                    android:text="예상 결과"
-                    android:textSize="20dp"
+                    android:text="가치"
+                    android:textSize="20sp"
                     android:layout_gravity="center"/>
             </TableRow>
 
@@ -109,28 +114,31 @@
             <TableRow
                 android:minHeight="80dp">
                 <TextView
-                    android:text="예) 지루함 외로움\n 같은 힘든 감정"/>
+                    android:text="예) 월/오전 7:00"/>
                 <TextView
-                    android:text="게임, TV 보기"/>
+                    android:text="건강한 아침을 먹음"/>
                 <TextView
-                    android:text="학습이나 취업에\n 방해"/>
+                    android:text="나의 건강"/>
             </TableRow>
 
             <!--3째줄-->
             <TableRow
                 android:minHeight="80dp">
                 <EditText
-                    android:hint="예) 지루함 외로움\n 같은 힘든 감정"
+                    android:id="@+id/row1col1"
+                    android:hint="예) 월/오전 7:00"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
-                    android:hint="게임, TV 보기"
+                    android:id="@+id/row1col2"
+                    android:hint="건강한 아침을 먹음"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
-                    android:hint="학습이나 취업에\n 방해"
+                    android:id="@+id/row1col3"
+                    android:hint="나의 건강"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
@@ -140,17 +148,20 @@
             <TableRow
                 android:minHeight="80dp">
                 <EditText
-                    android:hint="예) 지루함 외로움\n 같은 힘든 감정"
+                    android:id="@+id/row2col1"
+                    android:hint="예) 월/오전 7:00"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
-                    android:hint="게임, TV 보기"
+                    android:id="@+id/row2col2"
+                    android:hint="건강한 아침을 먹음"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
-                    android:hint="학습이나 취업에\n 방해"
+                    android:id="@+id/row2col3"
+                    android:hint="나의 건강"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
@@ -161,44 +172,34 @@
             <TableRow
                 android:minHeight="80dp">
                 <EditText
-                    android:hint="예) 지루함 외로움\n 같은 힘든 감정"
+                    android:id="@+id/row3col1"
+                    android:hint="예) 월/오전 7:00"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
-                    android:hint="게임, TV 보기"
+                    android:id="@+id/row3col2"
+                    android:hint="건강한 아침을 먹음"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
                 <EditText
-                    android:hint="학습이나 취업에\n 방해"
+                    android:id="@+id/row3col3"
+                    android:hint="나의 건강"
                     android:textSize="14dp"
                     android:background="@null"
                     android:maxLines="3"/>
-            </TableRow>
-
-            <!--6째줄-->
-            <TableRow
-                android:minHeight="80dp">
-                <EditText
-                    android:hint="예) 지루함 외로움\n 같은 힘든 감정"
-                    android:textSize="14dp"
-                    android:background="@null"
-                    android:maxLines="3"/>
-                <EditText
-                    android:hint="게임, TV 보기"
-                    android:textSize="14dp"
-                    android:background="@null"
-                    android:maxLines="3"/>
-                <EditText
-                    android:hint="학습이나 취업에\n 방해"
-                    android:textSize="14dp"
-                    android:background="@null"
-                    android:maxLines="3"/>
-
             </TableRow>
 
         </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submit"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:text="저장"
+            android:layout_marginTop="5dp"/>
 
     </LinearLayout>
 
@@ -206,7 +207,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-
         android:background="#cccccc"
         android:gravity="center">
 

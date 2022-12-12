@@ -7,8 +7,7 @@
     <!--주차 제목 & activity제목 & activity 소개-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
@@ -23,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WEEK1"
+                android:text="DAY4"
                 android:textSize="50dp"/>
 
             <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
@@ -42,31 +41,42 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
-            <!--나중에 이미지 버튼으로 바꿀예정-->
+
+            <!--나중에 이미지 버튼으로 바꿀예정
             <Button
                 android:id="@+id/explanation"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="설명"/>
+                -->
+
+            <ImageButton
+                android:id="@+id/goBackIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_logo"
+                android:background="@drawable/round2"
+                android:layout_marginRight="15dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="당신의 생각은 실제가 아니다"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"/>
+                android:text="자기 자비"
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:text="당신은 어떤 생각에 융합되거나 뒤엉켜 있거나 걸려있나요? \n생각이 과거나 미래에 관한 것이거나, 자신에 관한 것이거나, \n판단, 이유, 규칙에 관한 것인가요? \n이것이 당신의 삶에 어떻게 영향을 끼치나요? " />
+            android:layout_marginTop="15dp"
+            android:text="사실, 내적 경험을 회피하지 않고 허용하고 받아들이는 것은 매우 어렵습니다. 그것은 고통스러운 것을 경험하기 싫은 게
+            \n일반적이기 때문입니다. 이 어려움을 해소하기 위해서는
+            \n자기 자비가 중요합니다. " />
 
     </LinearLayout>
 
     <!--활동 기록란-->
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -75,24 +85,71 @@
         android:paddingTop="20dp"
         android:orientation="vertical">
 
-        <EditText
+        <View
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="8"
             android:background="#e9e9e9"
-            android:gravity="top"
-            android:hint="당신의 생각을 적어봅시다."/>
+            android:gravity="top" />
 
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:text="저장" />
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:thumb="@drawable/custom_seekbar_thumb"
+                android:progressDrawable="@drawable/custom_seekbar_progress"
+                android:splitTrack="false"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp"
+            android:gravity="center|top">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/tenBackward"
+                android:background="@drawable/round3"
+                android:padding="0dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/tenbackward_logo"/>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/playButton"
+                android:background="@drawable/round3"
+                android:padding="0dp"
+                android:src="@drawable/play_logo"/>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/tenForward"
+                android:background="@drawable/round3"
+                android:padding="0dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/tenforward_logo"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:text="저장"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"/>
 
     <!--하단 메뉴바-->
     <LinearLayout

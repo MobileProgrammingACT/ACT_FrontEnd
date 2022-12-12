@@ -7,8 +7,7 @@
     <!--주차 제목 & activity제목 & activity 소개-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
@@ -23,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WEEK1"
+                android:text="DAY5"
                 android:textSize="50dp"/>
 
             <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
@@ -36,32 +35,47 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
-            <!--나중에 이미지 버튼으로 바꿀예정-->
+
+            <!--나중에 이미지 버튼으로 바꿀예정
             <Button
                 android:id="@+id/explanation"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="설명"/>
+            -->
+
+            <ImageButton
+                android:id="@+id/goBackIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_logo"
+                android:background="@drawable/round2"
+                android:layout_marginRight="15dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="당신의 생각은 실제가 아니다"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"/>
+                android:text="힘든 내적 경험 알아차리기"
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:text="당신은 어떤 생각에 융합되거나 뒤엉켜 있거나 걸려있나요? \n생각이 과거나 미래에 관한 것이거나, 자신에 관한 것이거나, \n판단, 이유, 규칙에 관한 것인가요? \n이것이 당신의 삶에 어떻게 영향을 끼치나요? " />
+            android:layout_marginTop="15dp"
+            android:text="당신의 생각이 당신이 아닌 것처럼, 당신의 감정도 당신이
+            \n아닙니다. 우리는 때때로 감정 경험을 우리 자신인 것처럼
+            \n말합니다. 예를 들어 “나는 슬퍼”, “나는 지루해”, “나는 외로워”
+            \n같이 말합니다. 그 대신에, 이번에는 “나는 내가 슬프다는 것을
+            \n알아차리고 있다”, “나는 내가 가슴이 답답하고, 공허하다고
+            \n느끼는 것을 알아차리고 있다” 같이 말해봅시다.
+            \n이처럼 감정을 알아차리고 거리를 두는 것은 더 쉽게 감정과
+            \n감각을 받아들이고 포용할 수 있도록 도와줍니다." />
 
     </LinearLayout>
 
@@ -84,7 +98,7 @@
             android:gravity="top"
             android:hint="당신의 생각을 적어봅시다."/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit"
             android:layout_width="70dp"
             android:layout_height="50dp"

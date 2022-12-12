@@ -7,8 +7,7 @@
     <!--주차 제목 & activity제목 & activity 소개-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
@@ -23,8 +22,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WEEK3"
-                android:textSize="50dp"/>
+                android:text="DAY18"
+                android:textSize="50sp"/>
 
             <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
             <ImageButton
@@ -42,26 +41,37 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
-            <!--나중에 이미지 버튼으로 바꿀예정-->
+
+            <!--나중에 이미지 버튼으로 바꿀예정
             <Button
                 android:id="@+id/explanation"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="설명"/>
+            -->
+
+            <ImageButton
+                android:id="@+id/goBackIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_logo"
+                android:background="@drawable/round2"
+                android:layout_marginRight="15dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="당신의 생각은 실제가 아니다"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"/>
+                android:text="구체적으로 계획하기"
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:text="당신은 어떤 생각에 융합되거나 뒤엉켜 있거나 걸려있나요? \n생각이 과거나 미래에 관한 것이거나, 자신에 관한 것이거나, \n판단, 이유, 규칙에 관한 것인가요? \n이것이 당신의 삶에 어떻게 영향을 끼치나요? " />
+            android:layout_marginTop="15dp"
+            android:text="이번에는 당신의 전념행동을 구체적이고, 측정 가능하며, 당신의 가치에 부합하고, 현실적이고, 시간에 민감하게 작성해봅시다.
+            \n그리고 각 전념행동이 얼마나 중요한지, 당신이 실천할 수 있는 능력에 얼마나 자신 있는지에 따라 1부터 10까지 평가해 봅시다. 둘 중 하나라도 7점 이하라면 전념행동을 더 중요하게 만들거나, 해낼 수 있는 능력에 더 자신감을 가지게 하는 방식으로
+            \n수정해 봅시다." />
 
     </LinearLayout>
 
@@ -84,7 +94,7 @@
             android:gravity="top"
             android:hint="당신의 생각을 적어봅시다."/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit"
             android:layout_width="70dp"
             android:layout_height="50dp"

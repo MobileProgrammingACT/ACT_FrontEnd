@@ -7,8 +7,7 @@
     <!--설명이 들어갈 자리-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2.5"
+        android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
@@ -23,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WEEK1"
+                android:text="DAY3"
                 android:textSize="50dp"/>
 
             <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
@@ -40,47 +39,55 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
-            <!--나중에 이미지 버튼으로 바꿀예정-->
+
+            <!--나중에 이미지 버튼으로 바꿀예정
             <Button
                 android:id="@+id/explanation"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="설명"/>
+            -->
+
+            <ImageButton
+                android:id="@+id/goBackIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_logo"
+                android:background="@drawable/round2"
+                android:layout_marginRight="15dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="회피의 순환"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
+
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:text="아래의 빈칸에 당신 내적의 힘듦, 회피 방법, 그리고 예상되는 결과를 채워봅시다.\n 그리고 어려운 경험으로부터 무엇을 배웠는지, 회피하기 위해 무엇을 하였는지, 회피함으로써 어떤 대가가 있었는지 적어봅시다." />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="때때로 회피는 좋을 수 있습니다. 그러나 회피가 당신의 가치에 방해한다면 문제가 될 수 있습니다. 이제 당신의 경험을
+            \n적어봅시다. 아래에 당신 힘듦, 회피 방법, 그리고 예상되는
+            \n결과를 써봅시다." />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000000"
-            android:layout_marginBottom="10dp"/>
     </LinearLayout>
 
     <!--활동이 들어갈 자리-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="1.5"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
         android:orientation="vertical">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:stretchColumns="*"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -186,7 +193,7 @@
 
         </TableLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit"
             android:layout_width="70dp"
             android:layout_height="50dp"
