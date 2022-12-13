@@ -14,7 +14,7 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/closebutton"
+            android:id="@+id/closeButtonEx_w1"
             android:padding="0dp"
             android:layout_gravity="end"
             android:src="@drawable/close_logo"/>
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:id="@+id/btnPrev"
+            android:id="@+id/btnPrev_w1"
             android:text="이전" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:id="@+id/btnNext"
+            android:id="@+id/btnNext_w1"
             android:text="다음" />
 
     </LinearLayout>

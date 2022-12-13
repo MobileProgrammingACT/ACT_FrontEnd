@@ -5,15 +5,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Week1 extends AppCompatActivity {
     public static Context mContext; // 다른 액티비티에서 변수 사용을 위함
     Button week1ActivityBtn1, week1ActivityBtn2, week1ActivityBtn3, week1ActivityBtn4, week1ActivityBtn5, week1ActivityBtn6, week1ActivityBtn7, week1ActivityBtn8;
+    ImageButton closeButton, closeButtonEx;
     View alertDialog;
+
+
+
     ImageView menuMed, menuHome ,menuSetting;
 
     @Override
@@ -120,6 +127,7 @@ public class Week1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 }

@@ -25,7 +25,7 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/closebutton"
+            android:id="@+id/closeButton_w1"
             android:padding="0dp"
             android:src="@drawable/close_logo"/>
 
@@ -49,7 +49,7 @@
     </LinearLayout>
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBar_w1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -69,7 +69,7 @@
 
 
         <ImageButton
-            android:id="@+id/tenBackward"
+            android:id="@+id/tenBackward_w1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/round2"
@@ -78,7 +78,7 @@
             android:src="@drawable/tenbackward_logo"/>
 
         <ImageButton
-            android:id="@+id/playButton"
+            android:id="@+id/playButton_w1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/round2"
@@ -95,7 +95,7 @@
             android:visibility="gone"/>
 
         <ImageButton
-            android:id="@+id/tenForward"
+            android:id="@+id/tenForward_w1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/round2"
@@ -106,7 +106,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/week1ActivityBtn1"
+        android:id="@+id/explanation_w1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:backgroundTint="#E2E2E2"
