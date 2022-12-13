@@ -22,13 +22,6 @@
             android:text="End"
             android:textSize="45dp"/>
 
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/musicButton"
-            android:padding="0dp"
-            android:src="@drawable/music_states"/>
-
     </LinearLayout>
     <!--수평선과 이미지, 설명-->
     <LinearLayout
@@ -79,7 +72,7 @@
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/week1ActivityBtn1"
+                    android:id="@+id/ending1"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:backgroundTint="#e9e9e9"
@@ -89,7 +82,7 @@
                     android:layout_marginBottom="10dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/week1ActivityBtn2"
+                    android:id="@+id/ending2"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:backgroundTint="#e9e9e9"

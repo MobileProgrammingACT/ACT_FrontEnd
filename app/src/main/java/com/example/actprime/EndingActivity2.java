@@ -11,7 +11,7 @@ import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Meditation1 extends AppCompatActivity {
+public class EndingActivity2 extends AppCompatActivity {
 
     Button explanation;
     ImageButton tenBackward, playButton, pauseButton, tenForward, closeButton;
@@ -22,13 +22,13 @@ public class Meditation1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.meditation_activity1);
+        setContentView(R.layout.ending_activity2);
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         explanation = (Button) findViewById(R.id.explanation);
 
         source = new MediaPlayer();
-        source = MediaPlayer.create(Meditation1.this, R.raw.meditation_activity2);
+        source = MediaPlayer.create(EndingActivity2.this, R.raw.ending_activity2);
 
         playButton = (ImageButton) findViewById(R.id.playButton);
         playButton.setOnClickListener(new View.OnClickListener() {

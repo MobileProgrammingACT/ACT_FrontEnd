@@ -22,13 +22,6 @@
             android:text="마음챙김"
             android:textSize="45sp"/>
 
-        <ImageButton
-            android:id="@+id/musicButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="0dp"
-            android:src="@drawable/music_states"/>
-
     </LinearLayout>
     <!--수평선과 이미지, 설명-->
     <LinearLayout
