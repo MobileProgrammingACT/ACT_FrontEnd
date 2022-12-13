@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-    public static Context mContext;
+    public static Context maContext;
     ImageView weekSelectImgViewT, weekSelectImgView1, weekSelectImgView2, weekSelectImgView3, weekSelectImgView4;
     View alertDialog;
     ImageView menuMed, menuHome ,menuSetting;
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        mContext = this;
+        maContext = this;
 
         weekSelectImgViewT = (ImageView) findViewById(R.id.weekSelectImgViewT);
         weekSelectImgView1 = (ImageView) findViewById(R.id.weekSelectImgView1);

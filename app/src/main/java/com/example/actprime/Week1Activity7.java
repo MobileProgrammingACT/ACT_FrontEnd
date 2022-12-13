@@ -46,7 +46,7 @@ public class Week1Activity7 extends AppCompatActivity {
             public void onClick(View view) {
                 writereview(content.getText().toString());
                 Toast.makeText(Week1Activity7.this, "저장했습니다", Toast.LENGTH_SHORT).show();
-                ((MainActivity) MainActivity.mContext).weekSelectImgView2.setEnabled(true);
+                ((MainActivity) MainActivity.maContext).weekSelectImgView2.setEnabled(true);
 
                 /**
                  // 저장버튼 누른 이후 3분 카운트 : 현재 1분
