@@ -31,7 +31,8 @@ public class Week1Activity3 extends AppCompatActivity {
     Button submit;
     ImageView menuMed, menuHome ,menuSetting;
     EditText row1col1, row1col2, row1col3, row2col1, row2col2, row2col3, row3col1, row3col2, row3col3;
-    ImageButton goBackIcon;
+    ImageButton musicButton, goBackIcon;
+    MediaPlayer musicPlayer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -112,6 +113,24 @@ public class Week1Activity3 extends AppCompatActivity {
             }
         });
 
+        /*music player*/
+        musicPlayer = MediaPlayer.create(this, R.raw.music1);
+        musicPlayer.start();
+        musicPlayer.setLooping(true);
+
+        musicButton = (ImageButton) findViewById(R.id.musicButton);
+        musicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicButton.setSelected(!musicButton.isSelected());
+                if (musicPlayer.isPlaying()) {
+                    musicPlayer.pause();
+                } else {
+                    musicPlayer.start();
+                }
+            }
+        });
+
         // 하단 네비게이션 바 활성화
         // 1. meditation 화면 넘어가기
         menuMed = (ImageView) findViewById(R.id.menuMed);
@@ -149,5 +168,11 @@ public class Week1Activity3 extends AppCompatActivity {
         WriteReview writereview = new WriteReview(content);
         ref.child("Act").child("Week1").child("day3").setValue(content);
     }
-
+    /*활동에서 나가면 음악이 꺼지게*/
+    @Override
+    protected void onStop() {
+        super.onStop();
+        musicPlayer.release();
+        musicPlayer = null;
+    }
 }

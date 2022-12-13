@@ -58,7 +58,5 @@ public class PersonalSettingActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 }

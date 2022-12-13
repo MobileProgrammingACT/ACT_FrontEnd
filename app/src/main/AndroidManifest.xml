@@ -44,6 +44,7 @@
         <activity android:name=".TutorialActivity2"/>
         <activity android:name=".TutorialActivity3"/>
         <activity android:name=".Week1"/>
+        <activity android:name=".Week1Activity0"/>
         <activity android:name=".Week1Activity1"/>
         <activity android:name=".Week1Activity2"/>
         <activity android:name=".Week1Activity3"/>
@@ -52,6 +53,7 @@
         <activity android:name=".Week1Activity6"/>
         <activity android:name=".Week1Activity7"/>
         <activity android:name=".Week2"/>
+        <activity android:name=".Week2Activity0"/>
         <activity android:name=".Week2Activity1"/>
         <activity android:name=".Week2Activity2"/>
         <activity android:name=".Week2Activity3"/>
@@ -60,6 +62,7 @@
         <activity android:name=".Week2Activity6"/>
         <activity android:name=".Week2Activity7"/>
         <activity android:name=".Week3"/>
+        <activity android:name=".Week3Activity0"/>
         <activity android:name=".Week3Activity1"/>
         <activity android:name=".Week3Activity2"/>
         <activity android:name=".Week3Activity3"/>

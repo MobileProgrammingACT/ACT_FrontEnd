@@ -1,18 +1,17 @@
 package com.example.actprime;
 
+import android.app.Dialog;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.text.style.IconMarginSpan;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,6 +27,7 @@ public class TutorialActivity3 extends AppCompatActivity {
     RadioButton often_01, often_02, often_03, often_04, often_05, often_06, often_07, often_08, often_09, often_10;
     RadioButton always_01, always_02, always_03, always_04, always_05, always_06, always_07, always_08, always_09, always_10;
     ImageButton closeButton;
+    Dialog explain;
     int answer;
 
     @Override
@@ -97,6 +97,10 @@ public class TutorialActivity3 extends AppCompatActivity {
         RadioButton often[] = {often_01, often_02, often_03, often_04, often_05, often_06, often_07, often_08, often_09, often_10};
         RadioButton always[] = {always_01, always_02, always_03, always_04, always_05, always_06, always_07, always_08, always_09, always_10};
 
+        explain = new Dialog(TutorialActivity3.this);
+        explain.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        explain.setContentView(R.layout.tutorial_activity3_explanation);
+
         submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,11 +122,11 @@ public class TutorialActivity3 extends AppCompatActivity {
                         answer += 5;
                     }
                 }
+                showexplain();
                 Toast.makeText(TutorialActivity3.this, "수고하셨습니다, 결과를 확인해 보세요!", Toast.LENGTH_SHORT).show();
                 ref.child("Act").child("firstscore").setValue(answer);
             }
         });
-
         closeButton = (ImageButton) findViewById(R.id.closeButton);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,7 +135,20 @@ public class TutorialActivity3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
+    public void showexplain(){
+        explain.show();
+        String score = String.valueOf(answer);
 
+        TextView firstscore = explain.findViewById(R.id.firstscore);
+        firstscore.setText(score);
+
+        Button close = explain.findViewById(R.id.close);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                explain.dismiss();
+            }
+        });
+    }
 }

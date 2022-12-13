@@ -12,13 +12,27 @@
             android:orientation="vertical"
             android:id="@+id/surveyResult1">
 
-        <TextView
-            android:id="@+id/surveyScore1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingLeft="10dp"
-            android:text="당신의 점수는 **점입니다."/>
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="당신의 점수는 다음과 같습니다."/>
+
+            <TextView
+                android:id="@+id/firstscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -40,10 +54,10 @@
         android:orientation="horizontal" >
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/close"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:id="@+id/btnEnd"
             android:text="닫기" />
 
     </LinearLayout>

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Week2 extends AppCompatActivity {
     public static Context mContext;
-    Button week2ActivityBtn1, week2ActivityBtn2, week2ActivityBtn3, week2ActivityBtn4, week2ActivityBtn5, week2ActivityBtn6, week2ActivityBtn7;
+    Button week2ActivityBtn0, week2ActivityBtn1, week2ActivityBtn2, week2ActivityBtn3, week2ActivityBtn4, week2ActivityBtn5, week2ActivityBtn6, week2ActivityBtn7;
     ImageView menuMed, menuHome ,menuSetting;
 
     @Override
@@ -22,6 +22,7 @@ public class Week2 extends AppCompatActivity {
 
         mContext = this;
 
+        week2ActivityBtn0 = (Button) findViewById(R.id.week2ActivityBtn1);
         week2ActivityBtn1 = (Button) findViewById(R.id.week2ActivityBtn2);
         week2ActivityBtn2 = (Button) findViewById(R.id.week2ActivityBtn3);
         week2ActivityBtn3 = (Button) findViewById(R.id.week2ActivityBtn4);
@@ -29,6 +30,14 @@ public class Week2 extends AppCompatActivity {
         week2ActivityBtn5 = (Button) findViewById(R.id.week2ActivityBtn6);
         week2ActivityBtn6 = (Button) findViewById(R.id.week2ActivityBtn7);
         week2ActivityBtn7 = (Button) findViewById(R.id.week2ActivityBtn8);
+
+        week2ActivityBtn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week2Activity0.class);
+                startActivity(intent);
+            }
+        });
 
         week2ActivityBtn1.setOnClickListener(new View.OnClickListener() {
             @Override

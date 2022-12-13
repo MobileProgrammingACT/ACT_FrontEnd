@@ -148,7 +148,7 @@ public class TutorialActivity1 extends AppCompatActivity {
         });
 
         /*화면에 진입했을 때 활동에 관한 설명이 바로 뜨게하기 */
-        tutorialActivity1Ex = (View) View.inflate(TutorialActivity1.this, R.layout.tutorial_activity1_explanation, null);
+        tutorialActivity1Ex = (View) View.inflate(TutorialActivity1.this, R.layout.tutorial_activity1_explanation,null);
         AlertDialog.Builder a1EX = new AlertDialog.Builder(TutorialActivity1.this);
         AlertDialog exit = a1EX.create();
         AlertDialog window = a1EX.create();

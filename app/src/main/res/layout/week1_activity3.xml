@@ -111,9 +111,9 @@
                     android:layout_gravity="center"/>
             </TableRow>
 
-            <!--2째줄 (예시)-->
+            <!--2째줄-->
             <TableRow
-                android:minHeight="80dp">
+                android:minHeight="60dp">
                 <TextView
                     android:text="예) 지루함 외로움\n 같은 힘든 감정"/>
                 <TextView
@@ -124,7 +124,7 @@
 
             <!--3째줄-->
             <TableRow
-                android:minHeight="80dp">
+                android:minHeight="50dp">
                 <EditText
                     android:id="@+id/row1col1"
                     android:hint="예) 지루함 외로움\n 같은 힘든 감정"
@@ -147,7 +147,7 @@
 
             <!--4째줄-->
             <TableRow
-                android:minHeight="80dp">
+                android:minHeight="50dp">
                 <EditText
                     android:id="@+id/row2col1"
                     android:hint="예) 지루함 외로움\n 같은 힘든 감정"
@@ -169,9 +169,8 @@
 
             </TableRow>
 
-            <!--5째줄-->
             <TableRow
-                android:minHeight="80dp">
+                android:minHeight="50dp">
                 <EditText
                     android:id="@+id/row3col1"
                     android:hint="예) 지루함 외로움\n 같은 힘든 감정"

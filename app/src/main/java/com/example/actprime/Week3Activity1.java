@@ -98,6 +98,24 @@ public class Week3Activity1 extends AppCompatActivity {
             }
         });
 
+        /*music player*/
+        musicPlayer = MediaPlayer.create(this, R.raw.music1);
+        musicPlayer.start();
+        musicPlayer.setLooping(true);
+
+        musicButton = (ImageButton) findViewById(R.id.musicButton);
+        musicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicButton.setSelected(!musicButton.isSelected());
+                if (musicPlayer.isPlaying()) {
+                    musicPlayer.pause();
+                } else {
+                    musicPlayer.start();
+                }
+            }
+        });
+
         // 하단 네비게이션 바 활성화
         // 1. meditation 화면 넘어가기
         menuMed = (ImageView) findViewById(R.id.menuMed);

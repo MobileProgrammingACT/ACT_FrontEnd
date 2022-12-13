@@ -12,9 +12,9 @@
         android:orientation="vertical">
 
         <ImageButton
+            android:id="@+id/closeButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/closebutton"
             android:padding="0dp"
             android:layout_gravity="end"
             android:src="@drawable/close_logo"/>
@@ -88,19 +88,19 @@
         android:orientation="horizontal" >
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPrev"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:id="@+id/btnPrev"
             android:text="이전" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:id="@+id/btnNext"
             android:text="다음" />
 
     </LinearLayout>

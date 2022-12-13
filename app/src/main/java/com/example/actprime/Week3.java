@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Week3 extends AppCompatActivity {
     public static Context mContext;
-    Button week3ActivityBtn1, week3ActivityBtn2, week3ActivityBtn3, week3ActivityBtn4, week3ActivityBtn5, week3ActivityBtn6, week3ActivityBtn7;
+    Button week3ActivityBtn0, week3ActivityBtn1, week3ActivityBtn2, week3ActivityBtn3, week3ActivityBtn4, week3ActivityBtn5, week3ActivityBtn6, week3ActivityBtn7;
     View alertDialog;
     ImageView menuMed, menuHome ,menuSetting;
 
@@ -23,6 +23,7 @@ public class Week3 extends AppCompatActivity {
 
         mContext = this;
 
+        week3ActivityBtn0 = (Button) findViewById(R.id.week3ActivityBtn1);
         week3ActivityBtn1 = (Button) findViewById(R.id.week3ActivityBtn2);
         week3ActivityBtn2 = (Button) findViewById(R.id.week3ActivityBtn3);
         week3ActivityBtn3 = (Button) findViewById(R.id.week3ActivityBtn4);
@@ -30,6 +31,14 @@ public class Week3 extends AppCompatActivity {
         week3ActivityBtn5 = (Button) findViewById(R.id.week3ActivityBtn6);
         week3ActivityBtn6 = (Button) findViewById(R.id.week3ActivityBtn7);
         week3ActivityBtn7 = (Button) findViewById(R.id.week3ActivityBtn8);
+
+        week3ActivityBtn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week3Activity0.class);
+                startActivity(intent);
+            }
+        });
 
         week3ActivityBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
