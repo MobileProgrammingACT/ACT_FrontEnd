@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -27,7 +28,7 @@ public class Week1Activity2 extends AppCompatActivity {
     Button submit;
     ImageView menuMed, menuHome ,menuSetting;
     EditText content;
-    ImageButton musicButton;
+    ImageButton musicButton, goBackIcon;
     MediaPlayer musicPlayer;
     String shared = "file";
     int count = 0;
@@ -59,6 +60,14 @@ public class Week1Activity2 extends AppCompatActivity {
                     }
                 }, 60000);*/
                 ((Week1)Week1.mContext).week1ActivityBtn2.setBackgroundColor(Color.argb(100, 255, 153, 153));
+            }
+        });
+        goBackIcon = (ImageButton) findViewById(R.id.goBackIcon);
+        goBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week1.class);
+                startActivity(intent);
             }
         });
 

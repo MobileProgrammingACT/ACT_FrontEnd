@@ -24,7 +24,7 @@ public class Week2Activity3 extends AppCompatActivity {
 
     Button submit;
     ImageView menuMed, menuHome ,menuSetting;
-    ImageButton tenBackward, playButton, pauseButton, tenForward;
+    ImageButton tenBackward, playButton, pauseButton, tenForward, goBackIcon;
     MediaPlayer source;
     SeekBar seekBar;
     int point;
@@ -161,6 +161,15 @@ public class Week2Activity3 extends AppCompatActivity {
                 ((Week1) Week1.mContext).week1ActivityBtn4.setEnabled(true);
                 }
                 }, 60000);**/
+            }
+        });
+
+        goBackIcon = (ImageButton) findViewById(R.id.goBackIcon);
+        goBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week2.class);
+                startActivity(intent);
             }
         });
 

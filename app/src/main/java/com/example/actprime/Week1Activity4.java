@@ -24,7 +24,7 @@ public class Week1Activity4 extends AppCompatActivity {
 
     Button submit;
     ImageView menuMed, menuHome ,menuSetting;
-    ImageButton tenBackward, playButton, pauseButton, tenForward;
+    ImageButton tenBackward, playButton, pauseButton, tenForward, goBackIcon;
     MediaPlayer source;
     SeekBar seekBar;
     int point;
@@ -162,6 +162,15 @@ public class Week1Activity4 extends AppCompatActivity {
                 }, 60000);**/
 
                 ((Week1)Week1.mContext).week1ActivityBtn4.setBackgroundColor(Color.argb(100, 255, 153, 153));
+            }
+        });
+
+        goBackIcon = (ImageButton) findViewById(R.id.goBackIcon);
+        goBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week1.class);
+                startActivity(intent);
             }
         });
 

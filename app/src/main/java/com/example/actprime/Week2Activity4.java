@@ -26,7 +26,7 @@ public class Week2Activity4 extends AppCompatActivity {
 
     Button value;
     ImageView menuMed, menuHome ,menuSetting;
-    ImageButton musicButton;
+    ImageButton musicButton, goBackIcon;
     MediaPlayer musicPlayer;
     String shared = "file";
     int count = 0;
@@ -56,6 +56,15 @@ public class Week2Activity4 extends AppCompatActivity {
                 ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
                 }
                 }, 60000);*/
+            }
+        });
+
+        goBackIcon = (ImageButton) findViewById(R.id.goBackIcon);
+        goBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week2.class);
+                startActivity(intent);
             }
         });
 

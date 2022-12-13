@@ -29,7 +29,7 @@ public class Week1Activity6 extends AppCompatActivity {
     Button submit;
     EditText reasonET, resultET;
     TextView reasonTV, resultTV, text0, text1_1, text1_2, text2_1, text2_2;
-    ImageButton musicButton;
+    ImageButton musicButton, goBackIcon;
     MediaPlayer musicPlayer;
     ImageView menuMed, menuHome ,menuSetting;
     String shared = "file";
@@ -91,6 +91,15 @@ public class Week1Activity6 extends AppCompatActivity {
                 }, 60000);*/
 
                 ((Week1)Week1.mContext).week1ActivityBtn6.setBackgroundColor(Color.argb(100, 255, 153, 153));
+            }
+        });
+
+        goBackIcon = (ImageButton) findViewById(R.id.goBackIcon);
+        goBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week1.class);
+                startActivity(intent);
             }
         });
 

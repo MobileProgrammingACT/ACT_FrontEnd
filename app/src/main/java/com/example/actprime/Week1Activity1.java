@@ -30,7 +30,7 @@ public class Week1Activity1 extends AppCompatActivity {
 
     Button submit;
     ImageView menuMed, menuHome ,menuSetting;
-    ImageButton musicButton;
+    ImageButton musicButton, goBackIcon;
     EditText content;
     MediaPlayer musicPlayer;
     String shared = "file"; //Edittext 값 저장용 -> 추후 삭제 예정
@@ -43,6 +43,7 @@ public class Week1Activity1 extends AppCompatActivity {
 
         submit = findViewById(R.id.submit);
         content = findViewById(R.id.content);
+        goBackIcon = (ImageButton) findViewById(R.id.goBackIcon);
 
         /*저장 메소드 - writereview불러오기*/
         submit.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,14 @@ public class Week1Activity1 extends AppCompatActivity {
                 }, 60000);*/
 
                 ((Week1)Week1.mContext).week1ActivityBtn1.setBackgroundColor(Color.argb(100, 255, 153, 153));
+            }
+        });
+
+        goBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week1.class);
+                startActivity(intent);
             }
         });
 
