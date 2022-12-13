@@ -74,6 +74,9 @@ public class Week1Activity7 extends AppCompatActivity {
                 ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
                 }
                 }, 60000);*/
+
+                ((MainActivity) MainActivity.maContext).weekSelectBtn1.setBackgroundColor(Color.argb(100, 230, 230, 250));
+
             }
         });
 

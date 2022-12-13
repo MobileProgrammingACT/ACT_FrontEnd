@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     public static Context maContext;
     ImageView weekSelectImgViewT, weekSelectImgView1, weekSelectImgView2, weekSelectImgView3, weekSelectImgView4;
+    Button weekSelectBtnT, weekSelectBtn1, weekSelectBtn2, weekSelectBtn3, weekSelectBtn4;
     View alertDialog;
     ImageView menuMed, menuHome ,menuSetting;
 
@@ -33,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         weekSelectImgView2 = (ImageView) findViewById(R.id.weekSelectImgView2);
         weekSelectImgView3 = (ImageView) findViewById(R.id.weekSelectImgView3);
         weekSelectImgView4 = (ImageView) findViewById(R.id.weekSelectImgView4);
+
+        weekSelectBtnT = (Button) findViewById(R.id.weekSelectBtnT);
+        weekSelectBtn1 = (Button) findViewById(R.id.weekSelectBtn1);
+        weekSelectBtn2 = (Button) findViewById(R.id.weekSelectBtn2);
+        weekSelectBtn3 = (Button) findViewById(R.id.weekSelectBtn3);
+        weekSelectBtn4 = (Button) findViewById(R.id.weekSelectBtn4);
+
+
 
         ImageView setting_btn = (ImageView) findViewById(R.id.menuSetting);
 
