@@ -72,7 +72,7 @@ public class Week2Activity7 extends AppCompatActivity {
                 }
                 }, 60000);*/
 
-                ((MainActivity) MainActivity.maContext).weekSelectBtn2.setBackgroundColor(Color.argb(100, 230, 230, 250));
+                ((Week1) Week1.mContext).week1ActivityBtn7.setBackground(getResources().getDrawable(R.drawable.round_change_button));
             }
         });
 
