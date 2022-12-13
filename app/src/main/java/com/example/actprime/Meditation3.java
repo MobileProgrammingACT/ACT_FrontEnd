@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Meditation3 extends AppCompatActivity {
 
-    Button explanation;
     ImageButton tenBackward, playButton, pauseButton, tenForward, closeButton;
     MediaPlayer source;
     SeekBar seekBar;
@@ -25,7 +24,6 @@ public class Meditation3 extends AppCompatActivity {
         setContentView(R.layout.meditation_activity3);
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-        explanation = (Button) findViewById(R.id.explanation);
 
         source = new MediaPlayer();
         source = MediaPlayer.create(Meditation3.this, R.raw.meditation_activity3);

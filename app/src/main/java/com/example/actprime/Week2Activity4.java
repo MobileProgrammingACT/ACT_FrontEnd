@@ -2,6 +2,7 @@ package com.example.actprime;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,14 +31,14 @@ public class Week2Activity4 extends AppCompatActivity {
         setContentView(R.layout.week2_activity4);
 
         value = findViewById(R.id.findValue);
-
         value.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Week2Activity4.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.viacharacter.org/"));
+                startActivity(intent);
+                Toast.makeText(Week2Activity4.this, "확인했습니다", Toast.LENGTH_SHORT).show();
                 ((Week2) Week2.mContext).week2ActivityBtn5.setEnabled(true);
                 ((Week2) Week2.mContext).week2ActivityBtn4.setBackgroundColor(Color.argb(100, 255, 153, 153));
-
                 /**
                  // 저장버튼 누른 이후 3분 카운트 : 현재 1분
                  Handler handler = new Handler();

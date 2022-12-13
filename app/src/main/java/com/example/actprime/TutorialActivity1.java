@@ -141,8 +141,8 @@ public class TutorialActivity1 extends AppCompatActivity {
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), MeditationActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), Tutorial.class);
+                startActivity(intent);
                 finish();
             }
         });

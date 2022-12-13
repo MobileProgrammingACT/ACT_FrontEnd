@@ -33,7 +33,7 @@ public class Ending extends AppCompatActivity {
         ending2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TutorialActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), EndingActivity2.class);
                 startActivity(intent);
             }
         });

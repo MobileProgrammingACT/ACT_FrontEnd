@@ -17,6 +17,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth = null;
@@ -24,11 +27,14 @@ public class LoginActivity extends AppCompatActivity {
     public Button LoginBtn;
     public TextView SignupText;
 
+    long mNow;
+    Date mDate;
+    SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd");
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        setTitle("로그인 페이지");
 
         LoginBtn = (Button) findViewById(R.id.LoginBtn);
         login_email = (EditText) findViewById(R.id.login_email);
@@ -39,6 +45,10 @@ public class LoginActivity extends AppCompatActivity {
         LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mNow = System.currentTimeMillis();
+                mDate = new Date(mNow);
+                String startdate = mFormat.format(mDate);
+
                 String loginEmail = login_email.getText().toString().trim();
                 String loginPwd = login_pwd.getText().toString().trim();
 
@@ -48,6 +58,8 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Intent goMain = new Intent(getApplicationContext(), MainActivity.class);
+                                    goMain.putExtra("userid", loginEmail);
+                                    goMain.putExtra("startdate", startdate);
                                     startActivity(goMain);
                                     finish();
                                 }

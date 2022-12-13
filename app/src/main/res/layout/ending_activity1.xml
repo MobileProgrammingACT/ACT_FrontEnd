@@ -21,16 +21,9 @@
             android:textSize="45dp"/>
 
         <ImageButton
+            android:id="@+id/closeButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/musicButton"
-            android:padding="0dp"
-            android:src="@drawable/music_states"/>
-
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/closebutton"
             android:padding="0dp"
             android:src="@drawable/close_logo"/>
 
@@ -56,8 +49,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="10dp"
-            android:text="처음에 점검한것을 기억하고있나요? 다시 한번 점검함으로써
-            \n3주 이전과 이후에 어떤 차이가 있는지 확인해 봅시다." />
+            android:text="당신이 생각에 얽매이고 감정에 저항하고 있다면, 그것이
+            \n당신에게 어떻게 영향을 미치고 있나요?" />
 
         <View
             android:layout_width="match_parent"
@@ -123,7 +116,7 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_01"
+                            android:id="@+id/never_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
@@ -131,14 +124,14 @@
                             />
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_01"
+                            android:id="@+id/rarely_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_01"
+                            android:id="@+id/sometimes_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
@@ -146,14 +139,14 @@
 
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_01"
+                            android:id="@+id/often_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_01"
+                            android:id="@+id/always_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -201,7 +194,7 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_02"
+                            android:id="@+id/never_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
@@ -209,28 +202,28 @@
                             />
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_02"
+                            android:id="@+id/rarely_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_02"
+                            android:id="@+id/sometimes_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_02"
+                            android:id="@+id/often_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_02"
+                            android:id="@+id/always_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -278,7 +271,7 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_03"
+                            android:id="@+id/never_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
@@ -286,28 +279,28 @@
                             />
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_03"
+                            android:id="@+id/rarely_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_03"
+                            android:id="@+id/sometimes_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_03"
+                            android:id="@+id/often_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_03"
+                            android:id="@+id/always_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -355,7 +348,7 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_04"
+                            android:id="@+id/never_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
@@ -363,28 +356,28 @@
                             />
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_04"
+                            android:id="@+id/rarely_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_04"
+                            android:id="@+id/sometimes_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_04"
+                            android:id="@+id/often_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_04"
+                            android:id="@+id/always_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -432,7 +425,7 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_05"
+                            android:id="@+id/never_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
@@ -440,28 +433,28 @@
                             />
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_05"
+                            android:id="@+id/rarely_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_05"
+                            android:id="@+id/sometimes_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_05"
+                            android:id="@+id/often_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_05"
+                            android:id="@+id/always_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -509,35 +502,35 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_06"
+                            android:id="@+id/never_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_06"
+                            android:id="@+id/rarely_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_06"
+                            android:id="@+id/sometimes_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_06"
+                            android:id="@+id/often_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_06"
+                            android:id="@+id/always_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -585,35 +578,35 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_07"
+                            android:id="@+id/never_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_07"
+                            android:id="@+id/rarely_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_07"
+                            android:id="@+id/sometimes_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_07"
+                            android:id="@+id/often_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_07"
+                            android:id="@+id/always_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -661,35 +654,35 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_08"
+                            android:id="@+id/never_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_08"
+                            android:id="@+id/rarely_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_08"
+                            android:id="@+id/sometimes_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_08"
+                            android:id="@+id/often_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_08"
+                            android:id="@+id/always_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -737,35 +730,35 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_09"
+                            android:id="@+id/never_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_09"
+                            android:id="@+id/rarely_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_09"
+                            android:id="@+id/sometimes_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_09"
+                            android:id="@+id/often_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_09"
+                            android:id="@+id/always_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -813,35 +806,35 @@
                         android:layout_columnSpan="5">
 
                         <RadioButton
-                            android:id="@+id/radioButton_never_10"
+                            android:id="@+id/never_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전혀"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_rarely_10"
+                            android:id="@+id/rarely_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="드물게"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_sometimes_10"
+                            android:id="@+id/sometimes_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="가끔"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_often_10"
+                            android:id="@+id/often_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="자주"
                             android:layout_marginEnd="10dp"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton_always_10"
+                            android:id="@+id/always_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="항상"
@@ -858,7 +851,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/week1ActivityBtn1"
+        android:id="@+id/submit"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:backgroundTint="#E2E2E2"

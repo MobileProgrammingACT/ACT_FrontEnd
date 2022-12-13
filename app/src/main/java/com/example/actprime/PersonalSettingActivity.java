@@ -14,12 +14,21 @@ public class PersonalSettingActivity extends AppCompatActivity {
 
     ImageView goBackIcon, alarmRefreshBtn;
     TextView usingAccount, startDay, alarmTime;
-    ImageView menuBookmark, menuHome ,menuSetting;
+    ImageView menuMed, menuHome, menuSetting;
+    String nickname, calendar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_setting);
+
+        nickname = getIntent().getStringExtra("userid");
+        usingAccount = (TextView) findViewById(R.id.usingAccount);
+        usingAccount.setText(nickname);
+
+        calendar = getIntent().getStringExtra("startdate");
+        startDay = (TextView) findViewById(R.id.startDay);
+        startDay.setText(calendar);
 
         // 1. 상단 뒤로가기 버튼 누르면 액티비티 종료
         goBackIcon = (ImageView) findViewById(R.id.goBackIcon);
@@ -27,6 +36,15 @@ public class PersonalSettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        menuMed = (ImageView) findViewById(R.id.menuMed);
+        menuMed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MeditationActivity.class);
+                startActivity(intent);
             }
         });
 
