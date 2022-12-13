@@ -26,14 +26,6 @@
                 android:text="DAY4"
                 android:textSize="50dp"/>
 
-            <!--필요없을 듯?-->
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/musicButton"
-                android:padding="0dp"
-                android:src="@drawable/music_states"/>
-
         </LinearLayout>
 
 
@@ -158,7 +150,7 @@
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_gravity="right"
-        android:text="저장"
+        android:text="완료"
         android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"/>
 

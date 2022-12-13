@@ -26,7 +26,7 @@ public class Week1Activity6 extends AppCompatActivity {
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference ref = db.getReference();
 
-    Button submit, okay;
+    Button submit;
     EditText reasonET, resultET;
     TextView reasonTV, resultTV, text0, text1_1, text1_2, text2_1, text2_2;
     ImageButton musicButton;
@@ -41,7 +41,6 @@ public class Week1Activity6 extends AppCompatActivity {
         setContentView(R.layout.week1_activity6);
 
         submit = (Button) findViewById(R.id.submit);
-        okay = (Button) findViewById(R.id.okay);
 
         reasonET = (EditText) findViewById(R.id.reasonET);
         resultET = (EditText) findViewById(R.id.resultET);
@@ -68,7 +67,6 @@ public class Week1Activity6 extends AppCompatActivity {
                 text1_2.setVisibility(View.VISIBLE);
                 text2_1.setVisibility(View.VISIBLE);
                 text2_2.setVisibility(View.VISIBLE);
-                okay.setVisibility(View.VISIBLE);
 
                 reasonTV.setText("내가 " + reasonET.getText().toString() + "다면, ");
                 resultTV.setText(" 나는 " + resultET.getText().toString() + " 있어.");
@@ -93,14 +91,6 @@ public class Week1Activity6 extends AppCompatActivity {
                 }, 60000);*/
 
                 ((Week1)Week1.mContext).week1ActivityBtn6.setBackgroundColor(Color.argb(100, 255, 153, 153));
-            }
-        });
-
-        okay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), com.example.actprime.Week1.class);
-                startActivity(intent);
             }
         });
 
@@ -160,7 +150,7 @@ public class Week1Activity6 extends AppCompatActivity {
     /*작성하는 메소드 writereview 정의, DB에 저장되는 방식 "review"키 값 내에 저장하기*/
     public void writereview(String content) {
         WriteReview writereview = new WriteReview(content);
-        ref.child("Act").child("Week1").child("week1act6").setValue(content);
+        ref.child("Act").child("Week1").child("day6").setValue(content);
     }
 
     /*활동에서 나가면 음악이 꺼지게*/

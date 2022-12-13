@@ -243,6 +243,7 @@
 
         </LinearLayout>
 
+        <!--
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/okay"
             android:layout_width="70dp"
@@ -251,6 +252,7 @@
             android:text="확인"
             android:layout_marginTop="5dp"
             android:visibility="invisible"/>
+            -->
 
     </LinearLayout>
 

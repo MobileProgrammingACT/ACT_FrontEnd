@@ -137,7 +137,7 @@ public class Week1Activity1 extends AppCompatActivity {
     /*작성하는 메소드 writereview 정의, DB에 저장되는 방식 "review"키 값 내에 저장하기*/
     public void writereview(String content) {
         WriteReview writereview = new WriteReview(content);
-        ref.child("Act").child("Week1").child("week1act1").setValue(content);
+        ref.child("Act").child("Week1").child("day1").setValue(content);
     }
 
     /*활동에서 나가면 음악이 꺼지게*/
