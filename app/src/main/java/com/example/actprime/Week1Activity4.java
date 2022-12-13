@@ -169,8 +169,7 @@ public class Week1Activity4 extends AppCompatActivity {
         goBackIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Week1.class);
-                startActivity(intent);
+                finish();
             }
         });
 
