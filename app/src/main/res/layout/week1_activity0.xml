@@ -43,7 +43,7 @@
             android:paddingRight="20dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:src="@drawable/tutorial_1"
+            android:src="@drawable/week1_0"
             android:scaleType="fitXY"/>
 
     </LinearLayout>

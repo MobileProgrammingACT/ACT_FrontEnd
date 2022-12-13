@@ -2,6 +2,7 @@ package com.example.actprime;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -90,6 +91,8 @@ public class Week1Activity6 extends AppCompatActivity {
                 ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
                 }
                 }, 60000);*/
+
+                ((Week1)Week1.mContext).week1ActivityBtn6.setBackgroundColor(Color.argb(100, 255, 153, 153));
             }
         });
 
