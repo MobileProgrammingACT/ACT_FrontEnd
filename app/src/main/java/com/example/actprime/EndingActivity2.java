@@ -135,7 +135,7 @@ public class EndingActivity2 extends AppCompatActivity {
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MeditationActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Ending.class);
                 startActivity(intent);
             }
         });

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Ending extends AppCompatActivity {
 
-    Button tutorial1, tutorial2, tutorial3;
+    Button ending1, ending2;
     ImageView menuMed, menuHome, menuSetting;
 
     @Override
@@ -19,30 +19,21 @@ public class Ending extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ending);
 
-        tutorial1 = (Button) findViewById(R.id.tutorial1);
-        tutorial2 = (Button) findViewById(R.id.tutorial2);
-        tutorial3 = (Button) findViewById(R.id.tutorial3);
+        ending1 = (Button) findViewById(R.id.ending1);
+        ending2 = (Button) findViewById(R.id.ending2);
 
-        tutorial1.setOnClickListener(new View.OnClickListener() {
+        ending1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TutorialActivity1.class);
+                Intent intent = new Intent(getApplicationContext(), EndingActivity1.class);
                 startActivity(intent);
             }
         });
 
-        tutorial2.setOnClickListener(new View.OnClickListener() {
+        ending2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TutorialActivity2.class);
-                startActivity(intent);
-            }
-        });
-
-        tutorial3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TutorialActivity3.class);
                 startActivity(intent);
             }
         });

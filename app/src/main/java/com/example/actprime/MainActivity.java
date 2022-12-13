@@ -60,7 +60,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /**
+        weekSelectImgView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week2.class);
+                startActivity(intent);
+            }
+        });
+
+        weekSelectImgView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Week3.class);
+                startActivity(intent);
+            }
+        });
+
+        weekSelectImgView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Ending.class);
+                startActivity(intent);
+            }
+        });
+
+        /*
         // 활동1의 저장 버튼을 누를 시 activity2의 색 변경, 그냥 누르면 경고창 뜨고 넘어가려면 확인 눌러야 함 (이지만 일단 대화창 뜨고 다음 화면 넘어가는 것 까지만)
         weekSelectImgView2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,16 +110,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
+        /*
         // 현재 글쓰기 내용은 DB에 저장안됨, 대신 아래 메소드를 통해 Realtime DB에 연결되었음은 확인가능
         weekSelectImgView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("message");
-
                 myRef.setValue("Hello, World!");
             }
-        });
+        });*/
 
         // 하단 네비게이션 바 활성화
         // 1. meditation 화면 넘어가기

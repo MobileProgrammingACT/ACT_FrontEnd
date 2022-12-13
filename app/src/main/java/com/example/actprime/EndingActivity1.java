@@ -1,4 +1,6 @@
 package com.example.actprime;
 
-public class EndingActivity1 {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class EndingActivity1 extends AppCompatActivity {
 }

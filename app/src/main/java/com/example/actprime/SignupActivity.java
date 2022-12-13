@@ -80,38 +80,5 @@ public class SignupActivity extends AppCompatActivity {
                         }
                     }
                 });
-
-
-        dialogView = (View) View.inflate(SignupActivity.this, R.layout.dialog, null);
-
-        AlertDialog.Builder dlg = new AlertDialog.Builder(SignupActivity.this);
-        dlg.setView(dialogView);
-
-        dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Intent main = new Intent(getApplicationContext(), MainActivity.class);
-
-                /**LayoutInflater inflater = getLayoutInflater();
-                 View layout = inflater.inflate(R.layout.dialog, (ViewGroup) findViewById(R.id.dialog));
-                 CalendarView DateSelect;
-                 DateSelect = layout.findViewById(R.id.DateSelect);
-                 Date startdate = new Date(DateSelect.getDate());
-                 firebaseRef.child("nqn4iwin").child("startdate").setValue(startdate);**/
-
-                //DateSelect = (CalendarView) findViewById(R.id.DateSelect);
-                //Date startdate = new Date(DateSelect.getDate());
-                //Toast.makeText(SignupActivity.this, startdate.toString(), Toast.LENGTH_SHORT).show();
-                startActivity(main);
-            }
-        });
-        dlg.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(SignupActivity.this, "취소했습니다", Toast.LENGTH_SHORT).show();
-            }
-        });
-        dlg.show();
     }
-
 }

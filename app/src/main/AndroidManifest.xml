@@ -71,6 +71,9 @@
         <activity android:name=".Meditation1"/>
         <activity android:name=".Meditation2"/>
         <activity android:name=".Meditation3"/>
+        <activity android:name=".Ending"/>
+        <activity android:name=".EndingActivity1"/>
+        <activity android:name=".EndingActivity2"/>
         <receiver android:name=".alarm.AlertReceiver"/>
     </application>
 

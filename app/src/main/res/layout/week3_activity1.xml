@@ -116,13 +116,15 @@
             <!--2째줄-->
             <TableRow
                 android:minHeight="80dp">
+
                 <EditText
                     android:id="@+id/row1col1"
                     android:layout_gravity="center"
-                    android:hint="예) 새로운 사람과\n       관계맺기"
-                    android:textSize="14sp"
                     android:background="@null"
-                    android:maxLines="3"/>
+                    android:hint="예) 새로운 사람과\n       관계맺기"
+                    android:maxLines="3"
+                    android:textSize="14sp" />
+
                 <EditText
                     android:id="@+id/row1col2"
                     android:layout_gravity="center"
