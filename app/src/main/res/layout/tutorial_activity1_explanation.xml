@@ -6,6 +6,21 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/closebutton"
+            android:padding="0dp"
+            android:layout_gravity="end"
+            android:src="@drawable/close_logo"/>
+
+    </LinearLayout>
+
     <ViewFlipper
         android:layout_width="wrap_content"
         android:layout_height="300dp"
@@ -20,13 +35,19 @@
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:paddingTop="30dp"
+                android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="첫 주에는 탈융합과 자기 생각에 필요한 만큼 \n거리를 두는 것에 초점을 맞추려 합니다.\n
-                 \n첫 주는 생각이 단지 정신적 사건이라는 것을 \n이해하는 것부터 시작합니다. \n
-                 \n당신의 생각이 당신을 어떻게든 납득시키려 \n하더라도 그들은 현실이나 실제가 아닙니다."
-                />
+                android:text="수용전념치료는 1980년대 미국의 심리학자
+                \n스티븐 헤이즈에 의해 개발되었으며, ‘건강한
+                \n것이 정상’이라는 가정을 하지 않는다는 점에서
+                \n전통적인 치료와 다릅니다. 수용전념치료는
+                \n증상을 줄이는 대신 개인의 증상과 고통스러운
+                \n감정을 받아들이고, 그러한 가운데서도 풍요롭고 의미 있는 삶을 만들어 나가도록 돕는 것을 주요 목표로 합니다. 수용전념치료는 관계구성틀
+                \n이론에 기반을 두고 있는데, 이는 인간의 언어와 인지에 관한 이론으로 인간의 언어적인 능력을
+                \n통해 직접 경험하지 않고도 많은 문제를
+                \n효과적으로 해결할 수 있지만, 심리적 문제
+                \n해결에는 반드시 효과가 있는 것은 아니라는 것을 주장합니다."/>
 
         </LinearLayout>
 
@@ -39,12 +60,17 @@
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:paddingTop="30dp"
+                android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="먼저 탈융합과 융합에 대해 알아봅시다. \n생각과 융합되어 있다는 것은 \n‘생각과 뒤엉켜 있어 생각이 현실이 아니라는 \n것을 알아차릴 충분한 관점을 갖지 못한 것’을 \n의미합니다.
-                \n\n다른 말로 ‘생각에 걸려있다’고도 합니다. \n사람들은 여러 방식으로 자기 생각과 융합되어 \n있을 수 있는데, 예를 들어 우울증이 있는 사람이 \n“나는 무능하고 한심한 패배자야”라는 생각에 \n융합되어 자신과 생각을 관련짓는 것입니다."
-                />
+                android:text="이에 수용전념치료는 고통스러운 감정이나
+                \n심리적인 경험을 통제하려 하는 것은 궁극적으로 더 많은 괴로움을 초래하기 때문에, 정신적,
+                \n정서적 고통에 관한 새로운 접근이 필요하다는
+                \n것을 주장합니다. 수용전념치료는 고통을
+                \n초래하는 생활사건과 감정 상태에 대한 새로운
+                \n접근방식을 설명하기 위해 ‘심리적 유연성’이라는 용어를 만들었습니다. 심리적 유연성이란 방어
+                \n없이 현재의 경험과 완전히 접촉하는 능력을
+                \n의미합니다. 심리적으로 유연하면 지금-여기의 상황적 요구에 대한 반응을 조절할 수 있습니다. 예를 들면 주의를 집중하고, 에너지를 효과적으로 사용하며, 정서적 혼란 속에서도 장기적인 가치와 의미 있는 목표 달성을 촉진하는 방식으로 "/>
 
         </LinearLayout>
 
@@ -57,27 +83,58 @@
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:paddingTop="30dp"
+                android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="이러한 종류의 생각에 융합되어 있으면 사람들은 \n전념행동을 통해 자신의 가치를 향해 나아가는 \n것을 회피하는 경향이 있습니다.
-                \n\n예를 들어 우울증이 있는 사람은 앞서 언급한 \n생각들에 융합되어 새로운 직업을 찾으려고 하지 \n않는 것입니다.
-                \n\n만약 이러한 사람이 생각과 거리를 두게 된다면(탈융합하게 된다면) 어떻게 될까요? \n아마 ‘아무도 나를 안 뽑아 줄 거야’와 같은 생각이 있어도 구직활동을 할 것입니다."
-                />
+                android:text="행동할 수 있습니다. 수용전념치료는 생각을
+                \n바꾸는 것에 초점을 맞추기보다는 생각의
+                \n유연성을 높이기 위해 수용, 마음챙김을
+                \n강조합니다. 수용전념치료를 사용하다 보면
+                \n생각은 내가 만들어낸 이야기일 뿐 절대적 사실이 아니라는 것을 알 수 있습니다. 만약 당신이 마음 속에서 일어나는 생각들을 모두 사실로 믿는다면, 매우 경직되고 융통성 없는 생각을 하게 될 수
+                \n있습니다. 그리고 이는 행동에까지 영향을 미칠 수 있습니다. 당신은 당신의 생각을 믿을 필요가 없으며, 생각이 행동을 통제하도록 둘 필요가
+                \n없습니다. 사실 우리의 생각은 반드시 현실을
+                \n반영하진 않습니다. 또한 생각은 몇 분 간격으로 바뀔 수 있습니다."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:id="@+id/explanation4">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="때로는 고통스러운 경험을 피하고 싶을 수
+                \n있습니다. 그러나 이러한 생각이나 느낌 등의
+                \n내적 경험을 수용하는 것이 중요합니다. 만약
+                \n이를 무시한다면, 이와 관련된 중요한 정보를
+                \n잃게 될 수도 있습니다. 생각이 사실이 아닌 단지 정신적 사건이고 감정이 문제가 아닌 중요한
+                \n정보의 역할을 하는 것을 알아차린다면 우리는
+                \n그것을 경험할 수 있게 됩니다. 사실 어려운
+                \n생각이나 감정은 우리의 정상적인 부분이기
+                \n때문에 두려워할 필요가 없습니다. 오히려 어려운 경험을 그대로 받아들인다면, 회피하고 저항할
+                \n필요가 줄어들 것입니다. 그리고 이는 당신이
+                \n당신의 가치에 따라 살아가는 데 필요한 유연성을 만들어 줄 것입니다."/>
 
         </LinearLayout>
 
     </ViewFlipper>
+
     <LinearLayout
         android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
             android:id="@+id/btnPrev"
             android:text="이전" />
 
@@ -85,17 +142,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
             android:id="@+id/btnNext"
             android:text="다음" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="30dp"
-            android:id="@+id/btnEnd"
-            android:text="닫기" />
 
     </LinearLayout>
 
