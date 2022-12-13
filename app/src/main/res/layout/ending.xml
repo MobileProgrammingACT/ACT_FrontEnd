@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="10dp"
-            android:text="축하합니다!"
+            android:text="당신이 원하는 삶에 더 가까워졌나요?"
             android:textSize="20dp"/>
 
         <TextView
@@ -51,13 +51,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="10dp"
-            android:text="" />
+            android:text="지금까지의 과정은 모두 의미있는 삶을 만들어가는 데 필요한
+            \n심리적 유연성을 기르기 위한 것이었습니다.
+            \n하지만 의미있는 삶을  만드는 것은 3주로 끝나지 않습니다.
+            \n이것은 계속 진행중인 과정입니다." />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#000000"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 

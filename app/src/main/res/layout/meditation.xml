@@ -43,14 +43,24 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="10dp"
-            android:text="명상은 마음을 정리하고 차분히 하는 활동입니다. \n설명을 통해 명상을 연습하고 시도해봅시다"
-            android:textSize="18dp"/>
+            android:text="바로 지금, 여기"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:text="우리는 과거나 미래를 걱정하는 게 지나치게 많은 시간을 보내는
+            \n경향이 있으며, 이는 종종 불필요한 고통을 초래합니다.
+            \n판단하거나 예측할 필요 없이 바로 지금 그리고 여기 주변에서
+            \n일어나는 일을 알아차리어, 밀려오는 잡념에서 벗어나 봅시다. " />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#000000"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 

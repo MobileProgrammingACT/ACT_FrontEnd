@@ -45,6 +45,7 @@
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:src="@drawable/tutorial_1"
+            android:background="@drawable/picture_border"
             android:scaleType="fitXY"/>
 
     </LinearLayout>

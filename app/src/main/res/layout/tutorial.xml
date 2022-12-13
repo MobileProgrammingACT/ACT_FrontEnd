@@ -51,13 +51,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="10dp"
-            android:text="" />
+            android:text="수용전념치료(Acceptance and Commitment Therapy:ACT)를
+            \n통해 당신의 생각과 감정을 바꾸는 것이 아니라, 어떻게 당신의
+            \n생각과 감정과 함께 사는지 배워봅시다.
+            \n장애물이 있어도 유연하게 받아들여 가치를 향해 나아가봅시다."/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#000000"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 
