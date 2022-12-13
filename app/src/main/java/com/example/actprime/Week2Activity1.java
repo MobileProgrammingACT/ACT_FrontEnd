@@ -1,6 +1,5 @@
 package com.example.actprime;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
@@ -10,29 +9,26 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.EditText;
 
-import com.example.actprime.Week1;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.os.Handler;
 
 public class Week2Activity1 extends AppCompatActivity {
 
-    /*DB 저장 정의용 - 위치 변경 X!!!*/
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference ref = db.getReference();
 
     Button submit;
     ImageView menuMed, menuHome ,menuSetting;
-    ImageButton musicButton;
     EditText content;
+    ImageButton musicButton;
     MediaPlayer musicPlayer;
-    String shared = "file"; //Edittext 값 저장용 -> 추후 삭제 예정
+    String shared = "file";
     int count = 0;
 
     @Override
@@ -49,6 +45,7 @@ public class Week2Activity1 extends AppCompatActivity {
             public void onClick(View view) {
                 writereview(content.getText().toString());
                 Toast.makeText(Week2Activity1.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+                ((Week2) Week2.mContext).week2ActivityBtn2.setEnabled(true);
 
                 /**
                  // 저장버튼 누른 이후 3분 카운트 : 현재 1분
@@ -56,7 +53,8 @@ public class Week2Activity1 extends AppCompatActivity {
                  handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                ((Week1) Week1.mContext).week1ActivityBtn2.setEnabled(true);
+                //btn2
+                ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
                 }
                 }, 60000);*/
             }

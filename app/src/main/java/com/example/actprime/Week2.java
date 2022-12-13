@@ -1,5 +1,6 @@
 package com.example.actprime;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,16 +11,16 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Week2 extends AppCompatActivity {
-
+    public static Context mContext;
     Button week2ActivityBtn1, week2ActivityBtn2, week2ActivityBtn3, week2ActivityBtn4, week2ActivityBtn5, week2ActivityBtn6, week2ActivityBtn7;
-    View alertDialog;
     ImageView menuMed, menuHome ,menuSetting;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week2);
+
+        mContext = this;
 
         week2ActivityBtn1 = (Button) findViewById(R.id.week2ActivityBtn2);
         week2ActivityBtn2 = (Button) findViewById(R.id.week2ActivityBtn3);

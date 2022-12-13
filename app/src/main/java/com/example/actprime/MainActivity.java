@@ -3,6 +3,7 @@ package com.example.actprime;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static Context mContext;
     ImageView weekSelectImgViewT, weekSelectImgView1, weekSelectImgView2, weekSelectImgView3, weekSelectImgView4;
     View alertDialog;
     ImageView menuMed, menuHome ,menuSetting;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        mContext = this;
 
         weekSelectImgViewT = (ImageView) findViewById(R.id.weekSelectImgViewT);
         weekSelectImgView1 = (ImageView) findViewById(R.id.weekSelectImgView1);

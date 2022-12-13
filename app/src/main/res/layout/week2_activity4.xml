@@ -25,14 +25,6 @@
                 android:text="DAY11"
                 android:textSize="50dp"/>
 
-            <!--활동에 진입하면 노래가 나오고 버튼을 누르면 노래가 꺼지게, 활동에서 나가도 음악이 꺼지게-->
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/musicButton"
-                android:padding="0dp"
-                android:src="@drawable/music_states"/>
-
         </LinearLayout>
 
 

@@ -2,6 +2,7 @@ package com.example.actprime;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +46,7 @@ public class Week1Activity7 extends AppCompatActivity {
             public void onClick(View view) {
                 writereview(content.getText().toString());
                 Toast.makeText(Week1Activity7.this, "저장했습니다", Toast.LENGTH_SHORT).show();
+                ((MainActivity) MainActivity.mContext).weekSelectImgView2.setEnabled(true);
 
                 /**
                  // 저장버튼 누른 이후 3분 카운트 : 현재 1분
@@ -56,6 +58,8 @@ public class Week1Activity7 extends AppCompatActivity {
                 ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
                 }
                 }, 60000);*/
+
+                ((Week1)Week1.mContext).week1ActivityBtn7.setBackgroundColor(Color.argb(100, 255, 153, 153));
             }
         });
 

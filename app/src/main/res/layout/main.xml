@@ -161,7 +161,6 @@
                         android:layout_width="360dp"
                         android:layout_height="match_parent">
 
-
                         <ImageView
                             android:id="@+id/weekSelectImgViewT"
                             android:layout_width="match_parent"
@@ -210,6 +209,7 @@
                             android:id="@+id/weekSelectImgView2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:enabled="false"
                             android:src="@drawable/weekselectimg2"
                             android:scaleType="fitXY"/>
 
@@ -232,6 +232,7 @@
                             android:id="@+id/weekSelectImgView3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:enabled="false"
                             android:src="@drawable/weekselectimg3"
                             android:scaleType="fitXY"/>
 
@@ -254,6 +255,7 @@
                             android:id="@+id/weekSelectImgView4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:enabled="false"
                             android:src="@drawable/weekselectimgt"
                             android:scaleType="fitXY"/>
 
@@ -266,73 +268,6 @@
                             android:textColor="#ffffff"
                             android:layout_margin="4dp"/>
                     </FrameLayout>
-
-                    <!--
-                    <FrameLayout
-                        android:layout_width="360dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp">
-
-                        <ImageView
-                            android:id="@+id/weekSelectImgView5"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/weekselectimgt"
-                            android:scaleType="fitXY"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="WEEK5"
-                            android:textSize="70dp"
-                            android:layout_gravity="bottom|left"
-                            android:textColor="#ffffff"
-                            android:layout_margin="4dp"/>
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="360dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp">
-
-                        <ImageView
-                            android:id="@+id/weekSelectImgView6"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/weekselectimgt"
-                            android:scaleType="fitXY"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="WEEK6"
-                            android:textSize="70dp"
-                            android:layout_gravity="bottom|left"
-                            android:textColor="#ffffff"
-                            android:layout_margin="4dp"/>
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="360dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp">
-
-                        <ImageView
-                            android:id="@+id/weekSelectImgView7"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/weekselectimgt"
-                            android:scaleType="fitXY"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="WEEK7"
-                            android:textSize="70dp"
-                            android:layout_gravity="bottom|left"
-                            android:textColor="#ffffff"
-                            android:layout_margin="4dp"/>
-                    </FrameLayout> -->
 
                 </LinearLayout>
 
