@@ -1,7 +1,6 @@
 package com.example.actprime;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -10,13 +9,18 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import android.os.Handler;
 
 public class Week2Activity1 extends AppCompatActivity {
@@ -29,13 +33,24 @@ public class Week2Activity1 extends AppCompatActivity {
     EditText content;
     ImageButton musicButton, goBackIcon;
     MediaPlayer musicPlayer;
-    String shared = "file";
-    int count = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week2_activity1);
+
+        DatabaseReference myref = db.getReference("/Act/Week2/day1");
+        myref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                String value = snapshot.getValue(String.class);
+                content.setText(value);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                content.setText("");
+            }
+        });
 
         submit = findViewById(R.id.submit);
         content = findViewById(R.id.content);
@@ -70,11 +85,6 @@ public class Week2Activity1 extends AppCompatActivity {
             }
         });
 
-        /*Edittext 값 유지 메소드*/
-        SharedPreferences sharedPreferences = getSharedPreferences(shared, 0);
-        String value = sharedPreferences.getString("key","");
-        content.setText(value);
-
         /*music player*/
         musicPlayer = MediaPlayer.create(this, R.raw.music1);
         musicPlayer.start();
@@ -96,7 +106,6 @@ public class Week2Activity1 extends AppCompatActivity {
         // 하단 네비게이션 바 활성화
         // 1. meditation 화면 넘어가기
         menuMed = (ImageView) findViewById(R.id.menuMed);
-
         menuMed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +116,6 @@ public class Week2Activity1 extends AppCompatActivity {
 
         // 2. mainActivity 화면 넘어가기
         menuHome = (ImageView) findViewById(R.id.menuHome);
-
         menuHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,7 +126,6 @@ public class Week2Activity1 extends AppCompatActivity {
 
         // 3. personal_setting 화면 넘어가기
         menuSetting = (ImageView) findViewById(R.id.menuSetting);
-
         menuSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,16 +133,6 @@ public class Week2Activity1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    /*Edittext 값 외부로 나간 이후에도 저장가능한 메소드*/
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        SharedPreferences  sharedPreferences = getSharedPreferences(shared, 0);
-        SharedPreferences.Editor editor  = sharedPreferences.edit();
-        String value = content.getText().toString();
-        editor.putString("key", value);
-        editor.commit();
     }
 
     /*작성하는 메소드 writereview 정의, DB에 저장되는 방식 "review"키 값 내에 저장하기*/

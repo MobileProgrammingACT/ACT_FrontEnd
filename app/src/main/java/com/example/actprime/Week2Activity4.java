@@ -1,9 +1,7 @@
 package com.example.actprime;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,11 +11,9 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.EditText;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import android.os.Handler;
 
 public class Week2Activity4 extends AppCompatActivity {
 
@@ -26,10 +22,7 @@ public class Week2Activity4 extends AppCompatActivity {
 
     Button value;
     ImageView menuMed, menuHome ,menuSetting;
-    ImageButton musicButton, goBackIcon;
-    MediaPlayer musicPlayer;
-    String shared = "file";
-    int count = 0;
+    ImageButton goBackIcon;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +31,6 @@ public class Week2Activity4 extends AppCompatActivity {
 
         value = findViewById(R.id.findValue);
 
-        /*저장 메소드 - writereview불러오기*/
         value.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +44,6 @@ public class Week2Activity4 extends AppCompatActivity {
                  handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                //btn2
                 ((Week1) Week1.mContext).week1ActivityBtn3.setEnabled(true);
                 }
                 }, 60000);*/
@@ -71,7 +62,6 @@ public class Week2Activity4 extends AppCompatActivity {
         // 하단 네비게이션 바 활성화
         // 1. meditation 화면 넘어가기
         menuMed = (ImageView) findViewById(R.id.menuMed);
-
         menuMed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,7 +72,6 @@ public class Week2Activity4 extends AppCompatActivity {
 
         // 2. mainActivity 화면 넘어가기
         menuHome = (ImageView) findViewById(R.id.menuHome);
-
         menuHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,7 +82,6 @@ public class Week2Activity4 extends AppCompatActivity {
 
         // 3. personal_setting 화면 넘어가기
         menuSetting = (ImageView) findViewById(R.id.menuSetting);
-
         menuSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -13,11 +13,15 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Week3Activity2 extends AppCompatActivity {
 
@@ -29,13 +33,41 @@ public class Week3Activity2 extends AppCompatActivity {
     EditText row1col1, row1col2, row1col3, row2col1, row2col2, row2col3, row3col1, row3col2, row3col3;
     ImageButton musicButton, goBackIcon;
     MediaPlayer musicPlayer;
-    String shared = "file";
-    int count = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week3_activity2);
+
+        DatabaseReference myref = db.getReference("/Act/Week3/day2");
+        myref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                String value = snapshot.getValue(String.class);
+                String arr[] = value.split(",");
+                row1col1.setText(arr[0]);
+                row1col2.setText(arr[1]);
+                row1col3.setText(arr[2]);
+                row2col1.setText(arr[3]);
+                row2col2.setText(arr[4]);
+                row2col3.setText(arr[5]);
+                row3col1.setText(arr[6]);
+                row3col2.setText(arr[7]);
+                row3col3.setText(arr[8]);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                row1col1.setText("");
+                row1col2.setText("");
+                row1col3.setText("");
+                row2col1.setText("");
+                row2col2.setText("");
+                row2col3.setText("");
+                row3col1.setText("");
+                row3col2.setText("");
+                row3col3.setText("");
+            }
+        });
 
         row1col1 = (EditText) findViewById(R.id.row1col1);
         row1col2 = (EditText) findViewById(R.id.row1col2);
@@ -54,10 +86,10 @@ public class Week3Activity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String content1, content2, content3, fullcontent;
-                content1 = row1col1.getText().toString() + ", " + row1col2.getText().toString() + ", " + row1col3.getText().toString();
-                content2 = row2col1.getText().toString() + ", " + row2col2.getText().toString() + ", " + row2col3.getText().toString();
-                content3 = row3col1.getText().toString() + ", " + row3col2.getText().toString() + ", " + row3col3.getText().toString();
-                fullcontent = content1 + "/" + content2 + "/" + content3;
+                content1 = row1col1.getText().toString() + "," + row1col2.getText().toString() + "," + row1col3.getText().toString();
+                content2 = row2col1.getText().toString() + "," + row2col2.getText().toString() + "," + row2col3.getText().toString();
+                content3 = row3col1.getText().toString() + "," + row3col2.getText().toString() + "," + row3col3.getText().toString();
+                fullcontent = content1 + "," + content2 + "," + content3;
                 writereview(fullcontent);
                 Toast.makeText(Week3Activity2.this, "저장했습니다", Toast.LENGTH_SHORT).show();
                 ((Week3) Week3.mContext).week3ActivityBtn3.setEnabled(true);
@@ -83,11 +115,6 @@ public class Week3Activity2 extends AppCompatActivity {
             }
         });
 
-        /*Edittext 값 유지 메소드*/
-        SharedPreferences sharedPreferences = getSharedPreferences(shared, 0);
-        String value = sharedPreferences.getString("key","");
-        row1col1.setText(value);
-
         // 하단 네비게이션 바 활성화
         // 1. meditation 화면 넘어가기
         menuMed = (ImageView) findViewById(R.id.menuMed);
@@ -101,7 +128,6 @@ public class Week3Activity2 extends AppCompatActivity {
 
         // 2. mainActivity 화면 넘어가기
         menuHome = (ImageView) findViewById(R.id.menuHome);
-
         menuHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,7 +138,6 @@ public class Week3Activity2 extends AppCompatActivity {
 
         // 3. personal_setting 화면 넘어가기
         menuSetting = (ImageView) findViewById(R.id.menuSetting);
-
         menuSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
