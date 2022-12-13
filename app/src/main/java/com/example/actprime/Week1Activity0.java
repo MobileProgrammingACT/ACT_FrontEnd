@@ -7,16 +7,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+import android.widget.ViewFlipper;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Week1Activity0 extends AppCompatActivity {
 
-    Button explanation;
-    ImageButton tenBackward, playButton, pauseButton, tenForward, closeButton;
+    Button explanation, btnNext, btnPrev;
+    ImageButton tenBackward, playButton, pauseButton, tenForward, closeButton, closeButtonEx;
     MediaPlayer source;
     SeekBar seekBar;
     int point;
+    ViewFlipper vFlipper;
+    View week1ActivityEx;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,6 +140,66 @@ public class Week1Activity0 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        /*화면에 진입했을 때 활동에 관한 설명이 바로 뜨게하기 */
+        week1ActivityEx = (View) View.inflate(Week1Activity0.this, R.layout.week1_activity0_explanation,null);
+        AlertDialog.Builder a1EX = new AlertDialog.Builder(Week1Activity0.this);
+        AlertDialog exit = a1EX.create();
+        AlertDialog window = a1EX.create();
+        window.setView(week1ActivityEx);
+        window.show();
+
+        vFlipper = (ViewFlipper) week1ActivityEx.findViewById(R.id.viewFlipper_t1);
+        btnNext = (Button) week1ActivityEx.findViewById(R.id.btnNext_t1);
+        btnPrev = (Button) week1ActivityEx.findViewById(R.id.btnPrev_t1);
+        closeButtonEx = (ImageButton) week1ActivityEx.findViewById(R.id.closeButtonEx_t1);
+        //btnEnd = (Button) tutorialActivity1Ex.findViewById(R.id.btnEnd);
+        //btnEnd.setVisibility(View.GONE);
+        btnPrev.setVisibility(View.INVISIBLE);
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vFlipper.showNext();
+                count++;
+                if(count==0)
+                    btnPrev.setVisibility(View.INVISIBLE);
+                else if(count>=1 && count <= 2) {
+                    btnPrev.setVisibility(View.VISIBLE);
+                    btnNext.setVisibility(View.VISIBLE);
+                    //btnEnd.setVisibility(View.GONE);
+                } else if(count==3) {
+                    btnNext.setVisibility(View.GONE);
+                    //btnEnd.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        btnPrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vFlipper.showPrevious();
+                count--;
+                if(count==0)
+                    btnPrev.setVisibility(View.INVISIBLE);
+                else if(count>=1 && count <= 2) {
+                    btnPrev.setVisibility(View.VISIBLE);
+                    btnNext.setVisibility(View.VISIBLE);
+                    //btnEnd.setVisibility(View.GONE);
+                }
+                else if(count==3) {
+                    btnNext.setVisibility(View.GONE);
+                    //btnEnd.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        closeButtonEx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count = 0;
+                window.dismiss();
             }
         });
     }
